@@ -49,19 +49,21 @@ input[type=submit]:hover {
 
 <div class="formulario">
   <div class="direita">
-    <form action="/action_page.php" >
-      <label for="Nome">Nome</label>
-      <input type="text" id="Nome" name="Nome" placeholder="Digite seu Nome">
+
+    <form action="resultado.php" method="post">
+
+      <label for="id_nome">Nome</label>
+      <input type="text" id="id_nome" name="nome" placeholder="Digite seu Nome">
 
       <br/><br/>
 
-      <label for="Sobrenome">Sobrenome</label>
-      <input type="text" id="Sobrenome" name="Sobrenome" placeholder="Digite seu Sobrenome">
+      <label for="id_sobrenome">Sobrenome</label>
+      <input type="text" id="id_sobrenome" name="sobrenome" placeholder="Digite seu Sobrenome">
 
       <br/><br/>
 
-      <label for="Estado">Estado</label>
-      <select id="Estado" name="Estado" >
+      <label for="id_estado">Estado</label>
+      <select id="id_estado" name="estado" >
           <option disabled selected value=""> Selecione...</option>
           <option value="AC">Acre</option>
           <option value="AL">Alagoas</option>
