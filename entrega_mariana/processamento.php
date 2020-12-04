@@ -39,10 +39,13 @@ $result_usuario= mysqli_query($conn, $result_usuario);
 
 ?>
 
-<h3>Agradecemos a sua mensagem! </br>Responderemos assim que possível.</h3>
 
+
+
+Agradecemos a sua mensagem! </br>Responderemos assim que possível.
+<!--
 <center><input class="botao" type='submit' value='Voltar' onclick='history.go(-1)' style='background-color:#FFFFFF; border-radius:3px;'/>
 </center>
-
+-->
 
 
