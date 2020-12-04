@@ -5,12 +5,12 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Medicio Bootstrap Template - Index</title>
+  <title>Medicina da Terra</title>
   <meta content="" name="descriptison">
   <meta content="" name="keywords">
 
   <!-- Favicons -->
-  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/logo_mt.png" rel="icon">
   <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
@@ -28,12 +28,6 @@
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
 
-  <!-- =======================================================
-  * Template Name: Medicio - v2.0.0
-  * Template URL: https://bootstrapmade.com/medicio-free-bootstrap-theme/
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
 </head>
 
 <body>
@@ -61,6 +55,8 @@
       <nav class="nav-menu d-none d-lg-block">
         <ul>
           <li class="active"><a href="index.html">Home</a></li>
+          <li><a href="blog.php">Blog</a></li>
+
           <li><a href="#about">Sobre nós</a></li>
           <li><a href="#services">Serviços</a></li>
           <!--<li><a href="#departments">Departments</a></li>
@@ -87,7 +83,7 @@
         </ul>
       </nav><!-- .nav-menu -->
 
-      <a href="#appointment" class="appointment-btn scrollto"><span class="d-none d-md-inline">Conheça nossos</span> cursos</a>
+      <a href="cursos.php" class="appointment-btn scrollto"><span class="d-none d-md-inline">Conheça nossos</span> cursos</a>
 
     </div>
   </header><!-- End Header -->
@@ -986,7 +982,7 @@
         <!-- You can delete the links only if you purchased the pro version. -->
         <!-- Licensing information: https://bootstrapmade.com/license/ -->
         <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/medicio-free-bootstrap-theme/ -->
-        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+          Designed by <a href="https://instagram.com/siriuswebdesign">Sirius Web Design</a>
       </div>
     </div>
   </footer><!-- End Footer -->
