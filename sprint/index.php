@@ -24,6 +24,7 @@
   <link href="assets/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
   <link href="assets/vendor/venobox/venobox.css" rel="stylesheet">
   <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/css/style.css" rel="stylesheet">
 
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
@@ -324,17 +325,17 @@
 
         <div class="row">
           <div class="col-lg-4 col-md-6 icon-box" data-aos="zoom-in" data-aos-delay="100">
-            <div class="icon"><img src="assets/img/servicos1.jpg" style="line-height: 1;width: 200px;height: 200px;background: rgba(63, 187, 192, 0.4);border-radius: 200px;padding: 5px;transition: 0.3s;color: rgba(255, 255, 255, 0.5);" class="icofont-heart-beat"></div>
+            <div class="icon"><img src="assets/img/servicos1.jpg" style="line-height: 1;width: 200px;height: 200px;background:#b8dedc;border-radius: 200px;padding: 5px;transition: 0.3s;color: rgba(255, 255, 255, 0.5);" class="icofont-heart-beat"></div>
             <h4 class="title"><a href="">Fitoterapia Afetiva</a></h4>
             <p class="description">Estude as Plantas Medicinais de forma descomplicada, a aprenda a usá-las com segurança em seu dia-a-dia.</p>
           </div>
           <div class="col-lg-4 col-md-6 icon-box" data-aos="zoom-in" data-aos-delay="200">
-            <div class="icon"><img src="assets/img/servicos2.jpg" style="line-height: 1;width: 200px;height: 200px;background: rgba(63, 187, 192, 0.4);border-radius: 200px;padding: 5px;transition: 0.3s;color: rgba(255, 255, 255, 0.5);"  class="icofont-drug"></div>
+            <div class="icon"><img src="assets/img/servicos2.jpg" style="line-height: 1;width: 200px;height: 200px;background:#b8dedc;border-radius: 200px;padding: 5px;transition: 0.3s;color: rgba(255, 255, 255, 0.5);"  class="icofont-drug"></div>
             <h4 class="title"><a href="">Capacitação em Terapias Integrativas</a></h4>
             <p class="description">Aromaterapia, Fitoenergética, Fitoterapia etérica e Reiki são algumas das modalidades que ensinamos online.</p>
           </div>
           <div class="col-lg-4 col-md-6 icon-box" data-aos="zoom-in" data-aos-delay="300">
-            <div class="icon"><img src="assets/img/servicos3.jpg" style="line-height: 1;width: 200px;height: 200px;background: rgba(63, 187, 192, 0.4);border-radius: 200px;padding: 5px;transition: 0.3s;color: rgba(255, 255, 255, 0.5);" class="icofont-dna-alt-2"></div>
+            <div class="icon"><img src="assets/img/servicos3.jpg" style="line-height: 1;width: 200px;height: 200px;background:#b8dedc;border-radius: 200px;padding: 5px;transition: 0.3s;color: rgba(255, 255, 255, 0.5);" class="icofont-dna-alt-2"></div>
             <h4 class="title"><a href="">Atendimento em Terapia Botânica</a></h4>
             <p class="description">Presencial e à distância. Oferecemos atendimento em terapias integrativas associadas à área botânica.</p>
           </div>

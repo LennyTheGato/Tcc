@@ -11,9 +11,9 @@ CREATE TABLE cursos(
 
 CREATE TABLE messages(
 	idMessage		int not null auto_increment,
-    nome            varchar(128),
 	emailRemetente	varchar(128) not null,
-    telefone		int(9) not null,	
+    assunto			varchar(255) not null,	
 	texto			text,
+    dthrEnvio		datetime,
     PRIMARY KEY (idMessage)
 );
