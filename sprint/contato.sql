@@ -1,4 +1,4 @@
-CREATE DATABASE IF NOT EXISTS contato CHARSET utf8;
+CREATE DATABASE IF NOT EXISTS medicinadaterra CHARSET utf8;
 
 USE contato;
 
