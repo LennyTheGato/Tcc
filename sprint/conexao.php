@@ -1,9 +1,9 @@
 <?php
 
-$servidor = "localhost";
-$usuario = "root";
-$senha = "";
-$dbname = "contato";
+define('HOST', 'localhost');
+define('USER', 'root');
+define('PASS', '');
+define('DBNAME', 'medicinadaterra');
     
 //Criar a conexao
-$conn = mysqli_connect($servidor, $usuario, $senha, $dbname);
+$conn = new PDO('mysql:host=' . HOST . ';dbname=' . DBNAME . ';', USER, PASS);
