@@ -46,6 +46,7 @@ session_start();
 
 <body onload="carregar()">
 
+
     <div id="header" class="header">InnerHTML</div>
 	<div id="content">InnerHTML</div>
 

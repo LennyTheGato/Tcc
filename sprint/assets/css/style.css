@@ -990,6 +990,7 @@ section {
   font-size: 13px;
 }
 
+
 .appointment .php-email-form .error-message {
   display: none;
   color: #fff;
@@ -1011,6 +1012,8 @@ section {
   padding: 15px;
   font-weight: 600;
 }
+
+
 
 .appointment .php-email-form .loading {
   display: none;

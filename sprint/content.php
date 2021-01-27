@@ -827,28 +827,39 @@ session_start();
             </div>
 
           </div>
-          <?php
-          if(isset($_SESSION['msg'])){
-              echo $_SESSION['msg'];
-              unset($_SESSION['msg']);
-        }
-          ?>
+
           <div class="col-lg-6">
-            <form action="processamento.php" method="POST" role="form" class="php-email-form">
+
+                        <?php
+
+              if(isset($_SESSION['msg'])) {
+                  echo $_SESSION['msg'];
+                  unset($_SESSION['msg']);
+              }
+
+              //code here
+
+              ?>
+
+              <form method="POST" action="proc_cad_msg.php" role="form" class="php-email-form">
               <div class="form-row">
+
                 <div class="col form-group">
-                  <input type="text" name="nome" class="form-control" id="id_nome" placeholder="Digite seu nome" data-rule="minlen:4" data-msg="Mínimo 4 caracteres" />
+                <input type="text" name="nome" class="form-control" id="id_nome" placeholder="Digite seu nome" data-rule="minlen:4" data-msg="Mínimo 4 caracteres" />
                   <div class="validate"></div>
                 </div>
+
                 <div class="col form-group">
                   <input type="email" class="form-control" name="email" id="id_email" placeholder="Seu email" data-rule="email" data-msg="Please enter a valid email" />
                   <div class="validate"></div>
                 </div>
               </div>
+
               <div class="form-group">
                 <input type="number" class="form-control" name="telefone" id="id_telefone" placeholder="Telefone" data-rule="minlen:4" data-msg="Mínimo 8 números." />
                 <div class="validate"></div>
               </div>
+
               <div class="form-group">
                 <textarea class="form-control" id="id_mensagem" name="messagem" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Message"></textarea>
                 <div class="validate"></div>
@@ -858,8 +869,15 @@ session_start();
                 <div class="error-message"></div>
                 <div class="sent-message">Sua mensagem foi enviada, obrigada!</div>
               </div>
-              <div class="text-center"><button type="submit" name="sendinfo" >Enviar Mensagem</button></div>
-            </form>
+
+              <div class="text-center">
+              <button type="submit" name="SendCadCont" value="Cadastrar">Enviar Mensagem</button>
+              </div>
+  
+
+
+                  </form>
+
           </div>
 
         </div>
