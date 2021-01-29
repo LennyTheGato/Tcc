@@ -54,13 +54,15 @@
 
        <!--<a href="index.php" class="logo mr-auto"><img src="assets/img/logo_mt.png" alt=""></a>
       Uncomment below if you prefer to use an image logo -->
-     <h1 class="logo mr-auto"><a href="../index.php"><img src="/..assets/img/logo_mt.png" alt=""></a></h1>
+     <h1 class="logo mr-auto"><a href="../index.php"><img src="../assets/img/logo_mt.png" alt=""></a></h1>
      <a href="">Bem vindo <strong><?php echo $_SESSION['user'];?></strong> </a>
 
       <nav class="nav-menu d-none d-lg-block">
         <ul>
           <li class="active"><a href="../index.php">Home</a></li>
-          <li><a href="../blog.php">Blog</a></li>
+          <li class="active"><a href="admin.php">Gerenciar</a></li>
+          <li><a href="Mensagens.php"> Mensagens </a></li>
+          <li><a href="inserirblog.php">Inserir Texto</a></li>
 
           <li><a href="desconectar.php"> Desconectar </a></li>
 

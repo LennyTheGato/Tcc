@@ -20,7 +20,7 @@ session_start();
 			$_SESSION['user']=$f2['user'];
 			$_SESSION['rol']=$f2['rol'];
 
-			echo '<script>alert("BIENVENIDO ADMINISTRADOR")</script> ';
+			echo '<script>alert("Seja Bem-Vindo(a) Administrador")</script> ';
 			echo "<script>location.href='admin.php'</script>";
 		
 		}
@@ -36,13 +36,13 @@ session_start();
 
 			header("Location: index2.php");
 		}else{
-			echo '<script>alert("CONTRASEÑA INCORRECTA")</script> ';
+			echo '<script>alert("Senha Incorreta!")</script> ';
 		
 			echo "<script>location.href='login.php'</script>";
 		}
 	}else{
 		
-		echo '<script>alert("ESTE USUARIO NO EXISTE, PORFAVOR REGISTRESE PARA PODER INGRESAR")</script> ';
+		echo '<script>alert("Usuário não existente, registre-se para entrar!")</script> ';
 		
 		echo "<script>location.href='login.php'</script>";	
 

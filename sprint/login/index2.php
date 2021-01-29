@@ -56,6 +56,89 @@
 <br/><br/>
 
 
+</div>
+
+<div class="span12">
+
+<div class="caption">
+
+<!--///////////////////////////////////////////////////Empieza cuerpo del documento interno////////////////////////////////////////////-->
+<div class="row-fluid">
+
+  <br/><br/><br/><br/><br/><br/><br/><br/>
+
+
+  <?php
+
+    require("connect_db.php");
+    $sql=("SELECT * FROM blog");
+
+//la variable  $mysqli viene de connect_db que lo traigo con el require("connect_db.php");
+    $query=mysqli_query($mysqli,$sql);
+
+
+      
+  ?>
+    
+  <?php 
+     while($arreglo=mysqli_fetch_array($query)){
+
+
+          echo "<br/><br/><br/><br/>$arreglo[1]<br/><br/>";
+          echo "$arreglo[2]";
+
+        
+       
+  
+    }
+
+  ?>
+  
+      
+            
+    
+
+
+<div class="span8">
+
+</div>	
+</div>	
+<br/>
+
+
+
+<!--EMPIEZA DESLIZABLE-->
+
+ <!--TERMINA DESLIZABLE-->
+
+
+
+
+
+</div>
+
+
+
+
+
+
+<!--///////////////////////////////////////////////////Termina cuerpo del documento interno////////////////////////////////////////////-->
+</div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
 <div id="footer">
  <!-- FOOTER E CRÉDITOS. -->
 

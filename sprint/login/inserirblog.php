@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <?php
 session_start();
 if (@!$_SESSION['user']) {
@@ -7,15 +6,9 @@ if (@!$_SESSION['user']) {
 	header("Location:index2.php");
 }
 ?>
+<!DOCTYPE html>
 <html lang="en">
   <head>
- <!-- botar os metas aki -->
- <meta charset="utf-8">
- <meta content="width=device-width, initial-scale=1.0" name="viewport">
-
-<meta content="" name="descriptison">
-<meta content="" name="keywords">
-
 <!-- Favicons -->
 <link href="../assets/img/logo_mt.png" rel="icon">
 <link href="../assets/img/apple-touch-icon.png" rel="apple-touch-icon">
@@ -37,7 +30,8 @@ if (@!$_SESSION['user']) {
 <link href="../assets/css/style.css" rel="stylesheet">
 
   <!-- Terminar os metas -->
-  <title>Administração</title>
+
+  <title>Adminstração</title>
   </head>
 <body>
 <div class="container">
@@ -48,108 +42,79 @@ if (@!$_SESSION['user']) {
 	?>
 </div>
 </header>
+<br/><br/><br/><br/><br/><br/>
+
+<form method="POST" action="" role="form" class="php-email-form">
 
 
-<div class="row">
+	<div class="col form-group">
+		
+			<label>
+				<b>Digite o Título</b> 
+			</label>
+			<input type="text" name="titulo" class="form-control" placeholder="Coloque seu Título"/>
+
+	</div>
+
+    <div class="form-group">
+		<label>
+			<b>Digite o Texto</b>
+		</label>
+            <input type="text" name="texto" class="form-control" placeholder="Digite seu texto"/>
+
+	</div>
+
 	
+
+      
+	<div class="text-center">
+    <button type="submit" name="submit" value="Postar!">Postar!</button>
+	</div>
+
 	
-		
-	<div class="span12">
-
-		<div class="caption">
-		
-<!--///////////////////////////////////////////////////Empieza cuerpo del documento interno////////////////////////////////////////////-->
-		<div class="row-fluid">
-		
-			<br/><br/><br/><br/><br/><br/><br/><br/>
 
 
-			<?php
+</form>
 
-				require("connect_db.php");
-				$sql=("SELECT * FROM login");
+<?php
+		if(isset($_POST['submit'])){
+			require("registroblog.php");
+		}
+	?>
+
+
+            
+    
+
+
+
+
 	
-//la variable  $mysqli viene de connect_db que lo traigo con el require("connect_db.php");
-				$query=mysqli_query($mysqli,$sql);
-
-				echo "<table border='1'; class='table table-hover';>";
-					echo "<tr class='warning'>";
-						echo "<td>Id</td>";
-						echo "<td>Usuário</td>";
-						echo "<td>Senha</td>";
-						echo "<td>Email</td>";
-						echo "<td>Senha de Administrador</td>";
-						echo "<td>Editar</td>";
-						echo "<td>Excluir</td>";
-					echo "</tr>";
-
-			    
-			?>
-			  
-			<?php 
-				 while($arreglo=mysqli_fetch_array($query)){
-				  	echo "<tr class='success'>";
-				    	echo "<td>$arreglo[0]</td>";
-				    	echo "<td>$arreglo[1]</td>";
-				    	echo "<td>$arreglo[2]</td>";
-				    	echo "<td>$arreglo[3]</td>";
-				    	echo "<td>$arreglo[4]</td>";
-
-				    	echo "<td><a href='atualizar.php?id=$arreglo[0]'><img src='../images/atualizar.gif' class='img-rounded'></td>";
-						echo "<td><a href='admin.php?id=$arreglo[0]&idborrar=2'><img src='../images/eliminar.png' class='img-rounded'/></a></td>";
-						
-
-						
-					echo "</tr>";
-				}
-
-				echo "</table>";
-
-					extract($_GET);
-					if(@$idborrar==2){
-		
-						$sqlborrar="DELETE FROM login WHERE id=$id";
-						$resborrar=mysqli_query($mysqli,$sqlborrar);
-						echo '<script>alert("Usuário Excluido!")</script> ';
-						//header('Location: proyectos.php');
-						echo "<script>location.href='admin.php'</script>";
-					}
-
-			?>
-			
-				  
-			  			  
-			  
-		
-		
-		<div class="span8">
-		
-		</div>	
-		</div>	
-		<br/>
-		
-
-
-		<!--EMPIEZA DESLIZABLE-->
-		
-		 <!--TERMINA DESLIZABLE-->
 
 
 
-		
-		
-		</div>
 
-		
+<!--EMPIEZA DESLIZABLE-->
+
+ <!--TERMINA DESLIZABLE-->
 
 
-		
+
+
+
+</div>
+
+
+
+
+
 
 <!--///////////////////////////////////////////////////Termina cuerpo del documento interno////////////////////////////////////////////-->
 </div>
 
-	</div>
 </div>
+
+
 
 <div id="footer">
  <!-- FOOTER E CRÉDITOS. -->
@@ -184,9 +149,6 @@ if (@!$_SESSION['user']) {
 
   <!-- Template Main JS File -->
   <script src="../assets/js/main.js"></script>
-
-
-</div>
 
 
 </div>

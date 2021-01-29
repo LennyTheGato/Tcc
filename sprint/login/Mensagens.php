@@ -1,19 +1,14 @@
-<!DOCTYPE html>
 <?php
 session_start();
 if (@!$_SESSION['user']) {
 	header("Location:login.php");
+}elseif ($_SESSION['rol']==2) {
+	header("Location:index2.php");
 }
-?>		
+?>
+<!DOCTYPE html>
 <html lang="en">
   <head>
-    <!-- botar os metas aki -->
- <meta charset="utf-8">
- <meta content="width=device-width, initial-scale=1.0" name="viewport">
-
-<meta content="" name="descriptison">
-<meta content="" name="keywords">
-
 <!-- Favicons -->
 <link href="../assets/img/logo_mt.png" rel="icon">
 <link href="../assets/img/apple-touch-icon.png" rel="apple-touch-icon">
@@ -35,94 +30,118 @@ if (@!$_SESSION['user']) {
 <link href="../assets/css/style.css" rel="stylesheet">
 
   <!-- Terminar os metas -->
+
+  <title>Adminstração</title>
   </head>
 <body>
 <div class="container">
 <header class="header">
 <div class="row">
 	<?php
-	include("../include/header2.php");
+	include("../include/header3.php");
 	?>
 </div>
 </header>
 
 
-<div class="row">
-	
-	
-		
-	<div class="span12">
 
-		<div class="caption">
-		
+</div>
+
+<div class="span12">
+
+<div class="caption">
+
 <!--///////////////////////////////////////////////////Empieza cuerpo del documento interno////////////////////////////////////////////-->
-		<h2> Administración de usuarios registrados</h2>	
-		<div class="well well-small">
-		<hr class="soft"/>
-		<h4>Edición de usuarios</h4>
-		<div class="row-fluid">
-		
-		<?php
-		extract($_GET);
-		require("connect_db.php");
+<div class="row-fluid">
 
-		$sql="SELECT * FROM login WHERE id=$id";
-	//la variable  $mysqli viene de connect_db que lo traigo con el require("connect_db.php");
-		$ressql=mysqli_query($mysqli,$sql);
-		while ($row=mysqli_fetch_row ($ressql)){
-		    	$id=$row[0];
-		    	$user=$row[1];
-		    	$pass=$row[2];
-		    	$email=$row[3];
-		    	$passadmin=$row[4];
-		    }
+  <br/><br/><br/><br/><br/><br/><br/><br/>
 
 
+  <?php
 
-		?>
+    require("connect_db.php");
+    $sql=("SELECT * FROM mensagem");
 
-		<form action="ejecutaactualizar.php" method="post">
-				Id<br><input type="text" name="id" value= "<?php echo $id ?>" readonly="readonly"><br>
-				Usuario<br> <input type="text" name="user" value="<?php echo $user?>"><br>
-				Password usuario<br> <input type="text" name="pass" value="<?php echo $pass?>"><br>
-				Correo usuario<br> <input type="text" name="email" value="<?php echo $email?>"><br>
-				Pssword administrador<br> <input type="text" name="passadmin" value="<?php echo $passadmin?>"><br>
-				
-				<br>
-				<input type="submit" value="Guardar" class="btn btn-success btn-primary">
-			</form>
+//la variable  $mysqli viene de connect_db que lo traigo con el require("connect_db.php");
+    $query=mysqli_query($mysqli,$sql);
 
-				  
-		
-		
-		<div class="span8">
-		
-		</div>	
-		</div>	
-		<br/>
-		
+    echo "<table border='1'; class='table table-hover';>";
+      echo "<tr class='warning'>";
+        echo "<td>Id</td>";
+        echo "<td>Usuário</td>";
+        echo "<td>E-mail</td>";
+        echo "<td>Telefone</td>";
+        echo "<td>Comentários</td>";
+        echo "<td>Excluir</td>";
+      echo "</tr>";
+
+      
+  ?>
+    
+  <?php 
+     while($arreglo=mysqli_fetch_array($query)){
+        echo "<tr class='success'>";
+          echo "<td>$arreglo[0]</td>";
+          echo "<td>$arreglo[1]</td>";
+          echo "<td>$arreglo[2]</td>";
+          echo "<td>$arreglo[3]</td>";
+          echo "<td>$arreglo[4]</td>";
+
+        echo "<td><a href='Mensagens.php?id=$arreglo[0]&idborrar=2'><img src='../images/eliminar.png' class='img-rounded'/></a></td>";
+        
+
+        
+      echo "</tr>";
+    }
+
+    echo "</table>";
+
+      extract($_GET);
+      if(@$idborrar==2){
+
+        $sqlborrar="DELETE FROM mensagem WHERE id=$id";
+        $resborrar=mysqli_query($mysqli,$sqlborrar);
+        echo '<script>alert("Comentario Excluido!")</script> ';
+        //header('Location: proyectos.php');
+        echo "<script>location.href='Mensagens.php'</script>";
+      }
+
+  ?>
+  
+      
+            
+    
 
 
-		<!--EMPIEZA DESLIZABLE-->
-		
-		 <!--TERMINA DESLIZABLE-->
+<div class="span8">
+
+</div>	
+</div>	
+<br/>
 
 
 
-		
-		
-		</div>
+<!--EMPIEZA DESLIZABLE-->
 
-		
+ <!--TERMINA DESLIZABLE-->
 
 
-		
+
+
+
+</div>
+
+
+
+
+
 
 <!--///////////////////////////////////////////////////Termina cuerpo del documento interno////////////////////////////////////////////-->
 </div>
 
-	</div>
 </div>
+
+
 
 <div id="footer">
  <!-- FOOTER E CRÉDITOS. -->
@@ -160,8 +179,5 @@ if (@!$_SESSION['user']) {
 
 
 </div>
-	</style>
   </body>
 </html>
-
-

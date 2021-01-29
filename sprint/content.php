@@ -861,7 +861,7 @@ session_start();
               </div>
 
               <div class="form-group">
-                <textarea class="form-control" id="id_mensagem" name="messagem" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Message"></textarea>
+                <textarea class="form-control" id="id_mensagem" name="mensagem" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Mensagem"></textarea>
                 <div class="validate"></div>
               </div>
               <div class="mb-3">

@@ -7,13 +7,13 @@ extract($_POST);	//extraer todos los valores del metodo post del formulario de a
 	//la variable  $mysqli viene de connect_db que lo traigo con el require("connect_db.php");
 	$resent=mysqli_query($mysqli,$sentencia);
 	if ($resent==null) {
-		echo "Error de procesamieno no se han actuaizado los datos";
-		echo '<script>alert("ERROR EN PROCESAMIENTO NO SE ACTUALIZARON LOS DATOS")</script> ';
+		echo "Ocorreu um erro no processamento de dados!";
+		echo '<script>alert("Erro na alteração de dados!")</script> ';
 		header("location: admin.php");
 		
 		echo "<script>location.href='admin.php'</script>";
 	}else {
-		echo '<script>alert("REGISTRO ACTUALIZADO")</script> ';
+		echo '<script>alert("Dados Atualizados!")</script> ';
 		
 		echo "<script>location.href='admin.php'</script>";
 
