@@ -25,19 +25,19 @@ if($SendCadCont){
         $insert_msg_cont -> bindParam(':mensagem', $mensagem);
 
         if($insert_msg_cont -> execute()){
-            $_SESSION['msg']= "Mensagem FOI enviada";
+            $_SESSION['msg']= "Mensagem enviada com sucesso!";
             header("Location: index.php");
 
 
         }else{
-            $_SESSION['msg'] = "Mensagem não foi enviada fdp";
+            $_SESSION['msg'] = "Falha ao enviar mensagem";
 
             header("Location: index.php");
         }
 
 
 }else{
-    $_SESSION['msg'] = "<p style='color:red'>A mensagem não foi enviada</p>";
+    $_SESSION['msg'] = "<p style='color:red'> Falha ao enviar mensagem </p>";
     header("Location: index.php");
 
 };

@@ -55,16 +55,15 @@
        <!--<a href="index.php" class="logo mr-auto"><img src="assets/img/logo_mt.png" alt=""></a>
       Uncomment below if you prefer to use an image logo -->
      <h1 class="logo mr-auto"><a href="index.php"><img src="assets/img/logo_mt.png" alt=""></a></h1>
+     <a href="">Bem vindo <strong><?php echo $_SESSION['user'];?></strong> </a>
 
       <nav class="nav-menu d-none d-lg-block">
         <ul>
-          <li class="active"><a href="index.php">Home</a></li>
-          <li><a href="blog.php">Blog</a></li>
+          <li class="active"><a href="../index.php">Home</a></li>
+          <li><a href="../blog.php">Blog</a></li>
 
-          <li><a href="login/login.php">Login</a></li>
+          <li><a href="desconectar.php"> Desconectar </a></li>
 
-          <li><a href="#about">Sobre nós</a></li>
-          <li><a href="#services">Serviços</a></li>
           <!--<li><a href="#departments">Departments</a></li>
           <li><a href="#doctors">Doctors</a></li>-->
           <!-- <li class="drop-down"><a href="">Drop Down</a>
@@ -84,12 +83,11 @@
             <li><a href="#">Drop Down 4</a></li>
           </ul>
         </li> -->
-          <li><a href="#contact">Contato</a></li>
 
         </ul>
       </nav><!-- .nav-menu -->
 
-      <div class="appointment-btn scrollto"> <a onclick="$('#content').load('cursos.php')"><span class="d-none d-md-inline">Conheça nossos</span> cursos</a></div>
+      
 
     </div>
 
