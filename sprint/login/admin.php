@@ -121,10 +121,7 @@ if (@!$_SESSION['user']) {
 			  			  
 			  
 		
-		
-		<div class="span8">
-		
-		</div>	
+
 		</div>	
 		<br/>
 		

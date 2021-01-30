@@ -84,7 +84,7 @@
      while($arreglo=mysqli_fetch_array($query)){
 
 
-          echo "<br/><br/><br/><br/>$arreglo[1]<br/><br/>";
+          echo "<br/><br/><br/><br/><b>$arreglo[1]</b><br/><br/>";
           echo "$arreglo[2]";
 
         

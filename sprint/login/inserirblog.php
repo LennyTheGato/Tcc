@@ -83,20 +83,80 @@ if (@!$_SESSION['user']) {
 	?>
 
 
+<!--///////////////////////////////////////////////////EDITAR////////////////////////////////////////////-->
+
+
             
-    
-
-
-
-
+<div class="row">
 	
+	
+		
+	<div class="span12">
+
+		<div class="caption">
+		
+
+		<div class="row-fluid">
+		
+			<br/><br/><br/><br/><br/><br/><br/><br/>
+
+
+			<?php
+
+				require("connect_db.php");
+				$sql=("SELECT * FROM blog");
+	
+//la variable  $mysqli viene de connect_db que lo traigo con el require("connect_db.php");
+				$query=mysqli_query($mysqli,$sql);
+
+				echo "<table border='1'; class='table table-hover';>";
+					echo "<tr class='warning'>";
+						echo "<td>Id</td>";
+						echo "<td>Titulo</td>";
+						echo "<td>Excluir</td>";
+
+					echo "</tr>";
+
+			    
+			?>
+			  
+			<?php 
+				 while($arreglo=mysqli_fetch_array($query)){
+				  	echo "<tr class='success'>";
+				    	echo "<td>$arreglo[0]</td>";
+				    	echo "<td>$arreglo[1]</td>";
+
+
+						echo "<td><a href='inserirblog.php?id=$arreglo[0]&idborrar=2'><img src='../images/eliminar.png' class='img-rounded'/></a></td>";
+						
+
+						
+					echo "</tr>";
+				}
+
+				echo "</table>";
+
+					extract($_GET);
+					if(@$idborrar==2){
+		
+						$sqlborrar="DELETE FROM blog WHERE id=$id";
+						$resborrar=mysqli_query($mysqli,$sqlborrar);
+						echo '<script>alert("Texto Excluido!")</script> ';
+
+						echo "<script>location.href='inserirblog.php'</script>";
+					}
+
+			?>
+			
+				  
+			  			  
+			  
+		
+
+		</div>	
 
 
 
-
-<!--EMPIEZA DESLIZABLE-->
-
- <!--TERMINA DESLIZABLE-->
 
 
 
