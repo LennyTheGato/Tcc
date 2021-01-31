@@ -46,15 +46,16 @@
         <i class="icofont-phone"></i> Call us now +1 5589 55488 55
       </div>
     </div>
-  </div>
--->
-  <!-- ======= Header ======= -->
-  <header id="header" class="fixed-top">
+  </div>-->
+
+ <!-- ======= Header ======= -->
+  <header id="header">
+    <div class="fixed.top">
     <div class="container d-flex align-items-center">
 
-       <!--<a href="index.php" class="logo mr-auto"><img src="assets/img/logo_mt.png" alt=""></a>
-      Uncomment below if you prefer to use an image logo -->
-     <h1 class="logo mr-auto"><a href="index.php"><img src="assets/img/logo_mt.png" alt=""></a></h1>
+      <a href="index.html" class="logo mr-auto"><img src="assets/img/logo_mt.png" alt=""></a>
+      <!-- Uncomment below if you prefer to use an image logo -->
+      <!-- <h1 class="logo mr-auto"><a href="index.html">Medicio</a></h1> -->
 
       <nav class="nav-menu d-none d-lg-block">
         <ul>
@@ -90,12 +91,9 @@
       </nav><!-- .nav-menu -->
 
       <div class="appointment-btn scrollto"> <a onclick="$('#content').load('cursos.php')"><span class="d-none d-md-inline">Conheça nossos</span> cursos</a></div>
-
     </div>
 
-
-	
-
+</div>
   </header><!-- End Header -->
 
 
@@ -103,7 +101,7 @@
   <script src="assets/vendor/jquery/jquery.min.js"></script>
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="assets/vendor/jquery.easing/jquery.easing.min.js"></script>
-  
+  <script src="assets/vendor/php-email-form/validate.js"></script>
   <script src="assets/vendor/waypoints/jquery.waypoints.min.js"></script>
   <script src="assets/vendor/counterup/counterup.min.js"></script>
   <script src="assets/vendor/owl.carousel/owl.carousel.min.js"></script>
@@ -112,6 +110,7 @@
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
+
 
 </body>
 
