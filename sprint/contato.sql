@@ -23,6 +23,17 @@ CREATE TABLE `blog` (
 `rol` int(3) NOT NULL
 );
 
+CREATE TABLE `curso` (
+`id`      INT (11) NOT NULL,
+`titulo`  VARCHAR (250),
+`preço`   DECIMAL (4,2),
+`lista1`  VARCHAR (250),
+`lista2`  VARCHAR (250),
+`lista3`  VARCHAR (250),
+`lista4`  VARCHAR (250),
+`rol` int(3) NOT NULL
+);
+
 
 CREATE TABLE `login` (
   `id` int(11) NOT NULL,
@@ -38,7 +49,7 @@ CREATE TABLE `login` (
 --
 
 INSERT INTO `login` (`id`, `user`, `password`, `email`, `passadmin`, `rol`) VALUES
-(1, 'Raphaela', '', 'raphaela.navachi@gmail.com', 'medicinadaterra', 1),
+(1, 'Raphaela', '', 'raphaela.navachi@gmail.com', 'Medicina_da_Terra21', 1),
 (2, 'Nathalia', 'odeioead', 'nathalia.assuncao@gmail.com', '', 2),
 (3, 'João', 'odeioead', 'joao.gomes@gmail.com', '', 2),
 (4, 'Mariana', 'odeioead', 'mariana.elma@gmail.com', '', 2);
@@ -59,5 +70,19 @@ ALTER TABLE `blog`
 
 ALTER TABLE `blog`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+  ALTER TABLE `curso`
+  ADD PRIMARY KEY (`id`);
+
+
+ALTER TABLE `curso`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+  INSERT INTO `curso` (`id`, `titulo`, `preço`, `lista1`, `lista2`, `lista3`, `lista4`) VALUES
+(1, 'Grátis', '0', 'Introdução aos princípios', 'O que é medicina da terra?', 'Materiais necessários', 'Mentoria exclusiva'),
+(2, 'FITOENERGÉTICA ESSENCIAL', '19', 'Energia das plantas', 'Fitoterapia', 'Saúde', 'Bem estar'),
+(3, 'Farmácia caseira com plantas', '29', 'Infusões', 'Inalações', 'Garrafadas tradicionais', 'Gotas fitoterápicas'),
+(4, 'Reiki Tradicional Usui', '49', 'Nível I: O despertar',  'Nível II: A transformação', 'Nível III: A realização', 'Nível IV: Mestre Iniciador');
+
 
 

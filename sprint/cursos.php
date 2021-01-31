@@ -1,3 +1,12 @@
+<?php
+session_start();
+if (@!$_SESSION['user']) {
+	header("Location:login.php");
+}elseif ($_SESSION['rol']==2) {
+	header("Location:index2.php");
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -38,92 +47,66 @@
 
   
     <!-- ======= Pricing Section ======= -->
-</br></br></br>
-    <section id="pricing" class="pricing">
-      <div class="container" data-aos="fade-up">
+    <?php
+    echo"</br></br></br>";
+    echo" <section id='pricing' class='pricing'>";
+    echo" <div class='container' data-aos='fade-up'>";
 
-        <div class="section-title">
-          <h2>Conheça nossos cursos</h2>
-          <p>Página dedicada à catalogação de cursos disponíveis</p>
-        </div>
+        echo"<div class='section-title'>";
+        echo"<h2>Conheça nossos cursos</h2>";
+        echo"<p>Página dedicada à catalogação de cursos disponíveis</p>";
+        echo" </div>";  
+        
+        echo "<div class='row'>";
 
-        <div class="row">
 
-          <div class="col-lg-3 col-md-6">
-            <div class="box" data-aos="fade-up" data-aos-delay="100">
-              <h3>Grátis</h3>
-              <h4><sup>R$</sup>0<span> / month</span></h4>
-              <ul>
-                <li>Introdução aos princípios</li>
-                <li>O que é medicina da terra?</li>
-                <li>Materiais necessários</li>
-                <li class="na">Mentoria exclusiva</li>
-               <!-- <li class="na">Catálogo de ervas</li>-->
-              </ul>
-              <div class="btn-wrap">
-                <a href="#" class="btn-buy">Comprar</a>
-              </div>
-            </div>
-          </div>
+require("login/connect_db.php");
+$sql=("SELECT * FROM curso");
 
-          <div class="col-lg-3 col-md-6 mt-4 mt-md-0">
-            <div class="box featured" data-aos="fade-up" data-aos-delay="200">
-              <h3>FITOENERGÉTICA ESSENCIAL</h3>
-              <h4><sup>R$</sup>19<span> / month</span></h4>
-              <ul>
-                <li>Energia das plantas</li>
-                <li>Fitoterapia</li>
-                <li>Saúde</li>
-                <li>Bem estar</li>
-               <!-- <li class="na">Curso 2</li>-->
-              </ul>
-              <div class="btn-wrap">
-                <a href="#" class="btn-buy">Comprar</a>
-              </div>
-            </div>
-          </div>
+$query=mysqli_query($mysqli,$sql);
 
-          <div class="col-lg-3 col-md-6 mt-4 mt-lg-0">
-            <div class="box" data-aos="fade-up" data-aos-delay="300">
-              <h3>Farmácia caseira com plantas</h3>
-              <h4><sup>R$</sup>29<span> / month</span></h4>
-              <ul>
-                <li>Infusões</li>
-                <li>Inalações</li>
-                <li>Garrafadas tradicionais</li>
-                <li>Gotas fitoterápicas</li>
-                <!--<li>Curso 3</li>-->
-              </ul>
-              <div class="btn-wrap">
-                <a href="#" class="btn-buy">Comprar</a>
-              </div>
-            </div>
-          </div>
+echo "<div class='col-lg-3 col-md-6 mt-4 mt-md-0'>";
+  echo "<div class='box featured' data-aos='fade-up' data-aos-delay='200'>";
 
-          <div class="col-lg-3 col-md-6 mt-4 mt-lg-0">
-            <div class="box" data-aos="fade-up" data-aos-delay="400">
-              <span class="advanced">Avançado</span>
-              <h3>Reiki Tradicional Usui</h3>
-              <h4><sup>R$</sup>49<span> / month</span></h4>
-              <ul>
-                <li>Nível I: O despertar</li>
-                <li>Nível II: A transformação</li>
-                <li>Nível III: A realização</li>
-                <li>Nível IV: Mestre Iniciador</li>
-               <!-- <li>Curso 4</li>-->
-              </ul>
-              <div class="btn-wrap">
-                <a href="#" class="btn-buy">Comprar</a>
-              </div>
-            </div>
-          </div>
+ /////////////////////////////////////////////////////////// Loop pra acrescentar os cursos ///////////////////////////////////////////////////////////
+while($arreglo=mysqli_fetch_array($query)){
 
-        </div>
 
-      </div>
-    </section> <!-- End Pricing Section -->
+    echo "<h3>$arreglo[1]</h3>";
+    echo "<h4><sup>R$</sup>$arreglo[2]<span> / month</span></h4>";
+    echo "<ul>";
+      echo "<li>$arreglo[3]</li>";
+      echo "<li>$arreglo[4]</li>";
+      echo "<li>$arreglo[5]</li>";
+      echo "<li>$arreglo[6]</li>";
+      
+      echo "<div class='btn-wrap'>";
+        echo "<a href='#' class='btn-buy'>Comprar</a>";
+      echo "<div/>";
 
+    echo "</ul>";
+    
+
+
+/////////////////////////////////////////////////////////// FIM do loop ///////////////////////////////////////////////////////////
+
+}
+
+echo "<div/>";
+echo "<div/>";
+
+
+
+
+echo "<div/>";
+echo "<div/>";
+ 
+   echo"</section>"; 
+    ?>
   
+
+
+
   <a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
 
   <!-- Vendor JS Files -->

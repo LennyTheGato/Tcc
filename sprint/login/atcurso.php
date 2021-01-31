@@ -68,27 +68,32 @@ if (@!$_SESSION['user']) {
 		extract($_GET);
 		require("connect_db.php");
 
-		$sql="SELECT * FROM login WHERE id=$id";
+		$sql="SELECT * FROM curso WHERE id=$id";
 	//la variable  $mysqli viene de connect_db que lo traigo con el require("connect_db.php");
 		$ressql=mysqli_query($mysqli,$sql);
 		while ($row=mysqli_fetch_row ($ressql)){
 		    	$id=$row[0];
-		    	$user=$row[1];
-		    	$pass=$row[2];
-		    	$email=$row[3];
-		    	$passadmin=$row[4];
+		    	$titulo=$row[1];
+		    	$preço=$row[2];
+		    	$conteudo1=$row[3];
+				$conteudo2=$row[4];
+				$conteudo3=$row[5];
+				$conteudo4=$row[6];
 		    }
 
 
 
 		?>
 
-		<form action="exatualizar.php" method="post">
+		<form action="exatcurso.php" method="post">
 				Id<br><input type="text" name="id" value= "<?php echo $id ?>" readonly="readonly"><br>
-				Usuário<br> <input type="text" name="user" value="<?php echo $user?>"><br>
-				Senha<br> <input type="text" name="pass" value="<?php echo $pass?>"><br>
-				E-mail<br> <input type="text" name="email" value="<?php echo $email?>"><br>
-				Senha Administrador<br> <input type="text" name="passadmin" value="<?php echo $passadmin?>"><br>
+				Título<br> <input type="text" name="titulo" value="<?php echo $titulo?>"><br>
+				Preço<br> <input type="number" name="preço" value="<?php echo $preço?>"><br>
+				Conteudo1<br> <input type="text" name="conteudo1" value="<?php echo $conteudo1?>"><br>
+				Conteudo2<br> <input type="text" name="conteudo2" value="<?php echo $conteudo2?>"><br>
+				Conteudo3<br> <input type="text" name="conteudo3" value="<?php echo $conteudo3?>"><br>
+				Conteudo4<br> <input type="text" name="conteudo4" value="<?php echo $conteudo4?>"><br>
+
 				
 				<br>
 				<input type="submit" value="Guardar" class="btn btn-success btn-primary">

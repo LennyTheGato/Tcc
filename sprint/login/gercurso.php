@@ -6,9 +6,17 @@ if (@!$_SESSION['user']) {
 	header("Location:index2.php");
 }
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
+ <!-- botar os metas aki -->
+ <meta charset="utf-8">
+ <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+<meta content="" name="descriptison">
+<meta content="" name="keywords">
+
 <!-- Favicons -->
 <link href="../assets/img/logo_mt.png" rel="icon">
 <link href="../assets/img/apple-touch-icon.png" rel="apple-touch-icon">
@@ -30,8 +38,7 @@ if (@!$_SESSION['user']) {
 <link href="../assets/css/style.css" rel="stylesheet">
 
   <!-- Terminar os metas -->
-
-  <title>Adminstração</title>
+  <title>Administração</title>
   </head>
 <body>
 <div class="container">
@@ -42,51 +49,8 @@ if (@!$_SESSION['user']) {
 	?>
 </div>
 </header>
-<br/><br/><br/><br/><br/><br/>
-
-<form method="POST" action="" role="form" class="php-email-form">
 
 
-	<div class="col form-group">
-		
-			<label>
-				<b>Digite o Título</b> 
-			</label>
-			<input type="text" name="titulo" class="form-control" placeholder="Coloque seu Título"/>
-
-	</div>
-
-    <div class="form-group">
-		<label>
-			<b>Digite o Texto</b>
-		</label>
-            <input type="text" name="texto" class="form-control" placeholder="Digite seu texto"/>
-
-	</div>
-
-	
-
-      
-	<div class="text-center">
-    <button type="submit" name="submit" value="Postar!">Postar!</button>
-	</div>
-
-	
-
-
-</form>
-
-<?php
-		if(isset($_POST['submit'])){
-			require("registroblog.php");
-		}
-	?>
-
-
-<!--///////////////////////////////////////////////////EDITAR////////////////////////////////////////////-->
-
-
-            
 <div class="row">
 	
 	
@@ -95,7 +59,7 @@ if (@!$_SESSION['user']) {
 
 		<div class="caption">
 		
-
+<!--///////////////////////////////////////////////////Empieza cuerpo del documento interno////////////////////////////////////////////-->
 		<div class="row-fluid">
 		
 			<br/><br/><br/><br/><br/><br/><br/><br/>
@@ -104,16 +68,108 @@ if (@!$_SESSION['user']) {
 			<?php
 
 				require("connect_db.php");
-				$sql=("SELECT * FROM blog");
+				$sql=("SELECT * FROM curso");
+
+?>
+				<!--////////////////////////////////////////////Começo do add curso;////////////////////////////////////////////-->
+
 	
+
+
+				<form method="POST" action="" role="form" class="php-email-form">
+		
+		
+				<div class="col form-group">
+					
+						<label>
+							<b>Digite o Título</b> 
+						</label>
+						<input type="text" name="titulo" class="form-control" placeholder="Coloque seu Título"/>
+			
+				</div>
+			
+				<div class="form-group">
+					<label>
+						<b>Digite o Preço</b>
+					</label>
+						<input type="number" name="preço" class="form-control" placeholder="Digite o Preço"/>
+			
+				</div>
+
+				<div class="form-group">
+					<label>
+						<b>Digite o conteúdo 1</b>
+					</label>
+						<input type="text" name="lista1" class="form-control" placeholder="Digite o conteúdo 1"/>
+			
+				</div>
+
+				<div class="form-group">
+					<label>
+						<b>Digite o conteúdo 2</b>
+					</label>
+						<input type="text" name="lista2" class="form-control" placeholder="Digite o conteúdo 2"/>
+			
+				</div>
+
+				<div class="form-group">
+					<label>
+						<b>Digite o conteúdo 3</b>
+					</label>
+						<input type="text" name="lista3" class="form-control" placeholder="Digite o conteúdo 3"/>
+			
+				</div>
+				
+				<div class="form-group">
+					<label>
+						<b>Digite o conteúdo 4</b>
+					</label>
+						<input type="text" name="lista4" class="form-control" placeholder="Digite o conteúdo 4"/>
+			
+				</div>
+			
+				
+			
+				  
+				<div class="text-center">
+				<button type="submit" name="submit" value="Postar!">Postar!</button>
+				</div>
+			
+				
+			
+			
+			</form>
+			
+			<?php
+					if(isset($_POST['submit'])){
+						require("regcurso.php");
+					}
+				?>
+		
+		
+		
+		<br/><br/><br/><br/><br/><br/><br/><br/>
+
+		
+			
+				<!-- ////////////////////////////////////////////Fim do add curso;////////////////////////////////////////////-->
+<?php
+	
+//la variable  $mysqli viene de connect_db que lo traigo con el require("connect_db.php");
 				$query=mysqli_query($mysqli,$sql);
 
 				echo "<table border='1'; class='table table-hover';>";
 					echo "<tr class='warning'>";
-						echo "<td>Id</td>";
-						echo "<td>Titulo</td>";
-						echo "<td>Excluir</td>";
+						echo "<td>id</td>";
+						echo "<td>Título</td>";
+						echo "<td>Preço</td>";
+						echo "<td>Conteudo 1</td>";
+						echo "<td>Conteudo 2</td>";
+						echo "<td>Conteudo 3</td>";
+						echo "<td>Conteudo 4</td>";
 
+						echo "<td>Editar</td>";
+						echo "<td>Excluir</td>";
 					echo "</tr>";
 
 			    
@@ -124,9 +180,14 @@ if (@!$_SESSION['user']) {
 				  	echo "<tr class='success'>";
 				    	echo "<td>$arreglo[0]</td>";
 				    	echo "<td>$arreglo[1]</td>";
+				    	echo "<td>$arreglo[2]</td>";
+				    	echo "<td>$arreglo[3]</td>";
+						echo "<td>$arreglo[4]</td>";
+						echo "<td>$arreglo[5]</td>";
+						echo "<td>$arreglo[6]</td>";
 
-
-						echo "<td><a href='inserirblog.php?id=$arreglo[0]&idborrar=2'><img src='../images/eliminar.png' class='img-rounded'/></a></td>";
+				    	echo "<td><a href='atcurso.php?id=$arreglo[0]'><img src='../images/atualizar.gif' class='img-rounded'></td>";
+						echo "<td><a href='gercurso.php?id=$arreglo[0]&idborrar=2'><img src='../images/eliminar.png' class='img-rounded'/></a></td>";
 						
 
 						
@@ -138,11 +199,11 @@ if (@!$_SESSION['user']) {
 					extract($_GET);
 					if(@$idborrar==2){
 		
-						$sqlborrar="DELETE FROM blog WHERE id=$id";
+						$sqlborrar="DELETE FROM curso WHERE id=$id";
 						$resborrar=mysqli_query($mysqli,$sqlborrar);
-						echo '<script>alert("Texto Excluido!")</script> ';
-
-						echo "<script>location.href='inserirblog.php'</script>";
+						echo '<script>alert("Curso Excluido!")</script> ';
+						//header('Location: proyectos.php');
+						echo "<script>location.href='gercurso.php'</script>";
 					}
 
 			?>
@@ -153,27 +214,30 @@ if (@!$_SESSION['user']) {
 		
 
 		</div>	
+		<br/>
+		
+
+
+		<!--EMPIEZA DESLIZABLE-->
+		
+		 <!--TERMINA DESLIZABLE-->
 
 
 
+		
+		
+		</div>
+
+		
 
 
+		
 
-
-
+<!--///////////////////////////////////////////////////Termina cuerpo del documento interno////////////////////////////////////////////-->
 </div>
 
-
-
-
-
-
-
+	</div>
 </div>
-
-</div>
-
-<!--///////////////////////////////////////////////////Fim da div do table////////////////////////////////////////////-->
 
 <div id="footer">
  <!-- FOOTER E CRÉDITOS. -->
@@ -208,6 +272,9 @@ if (@!$_SESSION['user']) {
 
   <!-- Template Main JS File -->
   <script src="../assets/js/main.js"></script>
+
+
+</div>
 
 
 </div>

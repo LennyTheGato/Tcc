@@ -60,7 +60,8 @@
       <nav class="nav-menu d-none d-lg-block">
         <ul>
           <li class="active"><a href="../index.php">Home</a></li>
-          <li class="active"><a href="admin.php">Gerenciar</a></li>
+          <li class="active"><a href="admin.php">Gerenciar Contas</a></li>
+          <li class="active"><a href="gercurso.php">Gerenciar Cursos</a></li>
           <li><a href="Mensagens.php"> Mensagens </a></li>
           <li><a href="inserirblog.php">Inserir Texto</a></li>
 
