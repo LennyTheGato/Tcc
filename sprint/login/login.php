@@ -55,7 +55,7 @@
 	<div class="d-flex justify-content-between align-items-center">
 	  <h2>Área exclusiva para alunos</h2>
 	  <ol>
-		<li><a href="index.php">Home</a></li>
+		<li><a href="../index.php">Home</a></li>
 		<li>Login</li>
 	  </ol>
 	</div>
