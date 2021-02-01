@@ -1,10 +1,5 @@
 <?php
 session_start();
-if (@!$_SESSION['user']) {
-	header("Location:login.php");
-}elseif ($_SESSION['rol']==2) {
-	header("Location:index2.php");
-}
 ?>
 
 <!DOCTYPE html>

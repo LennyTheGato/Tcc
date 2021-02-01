@@ -32,6 +32,7 @@ session_start();
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
 
+
 <!-- função do menu ajax -->
 
 <script type="text/javascript">
@@ -45,6 +46,8 @@ session_start();
 
 
 <body onload="carregar()">
+
+
 
 
     <div id="header" class="header">InnerHTML</div>

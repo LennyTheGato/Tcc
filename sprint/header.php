@@ -53,7 +53,7 @@
     <div class="fixed.top">
     <div class="container d-flex align-items-center">
 
-      <a href="index.html" class="logo mr-auto"><img src="assets/img/logo_mt.png" alt=""></a>
+      <a href="index.php" class="logo mr-auto"><img src="assets/img/logo_mt.png" alt=""></a>
       <!-- Uncomment below if you prefer to use an image logo -->
       <!-- <h1 class="logo mr-auto"><a href="index.html">Medicio</a></h1> -->
 
