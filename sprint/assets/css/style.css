@@ -134,12 +134,13 @@ h1, h2, h3, h4, h5, h6 {
 # Header
 --------------------------------------------------------------*/
 #header {
-  background: #fff;
+  padding: 10px 0;
+  top: 5px;
+  background: rgb(255, 255, 255);
   transition: all 0.5s;
   z-index: 997;
-  padding: 20px 0;
-  top: 30px;
-  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+
+ /* foi retirado a sombra do me nu box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.1); */
   position:sticky;
 
 }
@@ -653,9 +654,10 @@ section {
 --------------------------------------------------------------*/
 .breadcrumbs {
   padding: 20px 0;
-  background-color: #ecf8f9;
+  background-color: #ffffff;
   min-height: 40px;
-  margin-top: 120px;
+  margin-top: 0px; /* antigo 120px*/
+  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
 }
 
 @media (max-width: 992px) {

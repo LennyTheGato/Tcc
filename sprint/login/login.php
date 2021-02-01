@@ -26,6 +26,16 @@
 <link href="../assets/vendor/venobox/venobox.css" rel="stylesheet">
 <link href="../assets/vendor/aos/aos.css" rel="stylesheet">
 <link href="../assets/css/style.css" rel="stylesheet">
+<link href="../assets/css/login.css" rel="stylesheet">
+
+
+
+
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<link href="../assets/css/login.css" rel="stylesheet">
+
 
 <!-- Template Main CSS File -->
 <link href="../assets/css/style.css" rel="stylesheet">
@@ -35,27 +45,108 @@
 
 </head>
 <body >
+	
+<main id="main">
+
+<!-- ======= Breadcrumbs Section ======= -->
+<section class="breadcrumbs">
+  <div class="container">
+
+	<div class="d-flex justify-content-between align-items-center">
+	  <h2>Área exclusiva para alunos</h2>
+	  <ol>
+		<li><a href="index.php">Home</a></li>
+		<li>Login</li>
+	  </ol>
+	</div>
+
+  </div>
+</section><!-- End Breadcrumbs Section --><br>
+
+
+
+
+
+
+
 <div class="container">
 	<div class="section-title">
 		<h2>Iniciar Sessão</h2>
 	</div>
 	
 
-		<form action="validar.php" method="POST" role="form" class="php-email-form">
-			<div class="form-row">
-				
+
+	<div class="wrapper fadeInDown">
+  <div id="formContent">
+    <!-- Tabs Titles -->
+
+<!-- Icon -->
+<div class="fadeIn first">
+      <h2>Acesse:</h2>
+    </div>
+
+ <!-- Login Form -->
+ 
+
+
+
+ <form action="validar.php" method="POST" role="form" class="php-email-form">
+		
+      <input type="text" id="login" class="fadeIn second" name="mail" placeholder="login">
+      <input type="password" id="password" class="fadeIn third" name="pass" placeholder="Digite sua senha"><br>
+      <input type="submit" class="fadeIn fourth" value="Entrar">
+    </form>
+
+    <!-- Remind Passowrd 
+    <div id="formFooter">
+      <a class="underlineHover" href="#">Forgot Password?</a>
+    </div>
+-->
+
+<div class="fadeIn cinco">
+      <h2>Ou registre-se:</h2>
+    </div>
+
+	<form method="POST" action="" role="form" class="php-email-form">
+		
+
+
+		<input type="text" id="login" class="fadeIn first" name="realname" placeholder="Coloque seu nome">
+
+		<input type="text" id="login" class="fadeIn second" name="nick" placeholder="Coloque seu email">
+
+
+
+
+		<input type="password" id="password" class="fadeIn third" name="pass" placeholder="Coloque a senha"><br>
+
+		<input type="password" id="password" class="fadeIn third" name="rpass" placeholder="Repita sua senha"><br>
+
+
+		<input type="submit" name="submit" class="fadeIn fourth" value="Registre-se!">
+
+
+
+
+	  </form>
+
+
+  </div>
+</div>
+
+
+			 <!-- Remind Passowrd 	
 						<label>
 							<b>E-mail:</b>
 						</label>
-				<div class="col form-group">
-						<input class="form-control" style="border-radius:15px;" type="text" name="mail">
-				</div>
+						<input type="text" id="login" class="fadeIn second" name="mail"placeholder="login">
+						
 
 						<label>
 							<b>Senha:</b>
 						</label>
 				<div class="col form-group">
-					<input style="border-radius:15px;" type="password" name="pass">
+					<input class="fadeIn third" style="border-radius:15px;" type="password" name="pass">
 				</div>
 				<div class="text-center">
 					<input class="form-control" type="submit" value="Entrar">
@@ -63,9 +154,10 @@
 
 
 			</div>
+			
 		</form>
-<br>
-<!-- formulario registro -->
+<br>-->
+<!-- formulario registro 
 
 <form method="POST" action="" role="form" class="php-email-form">
 	<div class="form-row">
@@ -111,7 +203,7 @@
 
 
 </form>
-</div>
+</div>-->
 
 <?php
 		if(isset($_POST['submit'])){
@@ -137,7 +229,6 @@
     </div>
   </footer><!-- End Footer -->
 
-  <div id="preloader"></div>
   <a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
 
 		  <!-- Vendor JS Files -->
