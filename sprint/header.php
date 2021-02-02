@@ -62,7 +62,6 @@
           <li class="active"><a href="index.php">Home</a></li>
           <li><a href="blog.php">Blog</a></li>
 
-          <li><a href="login/login.php">Login</a></li>
 
           <li><a href="#about">Sobre nós</a></li>
           <li><a href="#services">Serviços</a></li>
@@ -85,7 +84,9 @@
             <li><a href="#">Drop Down 4</a></li>
           </ul>
         </li> -->
-          <li><a href="#contact">Contato</a></li>
+          <li><a href="#contact">Contato</a></li>         
+           <li><a href="login/login.php">Login</a></li>
+
 
         </ul>
       </nav><!-- .nav-menu -->

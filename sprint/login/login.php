@@ -72,7 +72,7 @@
 <div class="container">
 	<div class="section-title">
 		<h2>Iniciar Sessão</h2>
-	</div>
+	</div></div>
 	
 
 
@@ -82,7 +82,7 @@
 
 <!-- Icon -->
 <div class="fadeIn first">
-      <h2>Acesse:</h2>
+      <br><h2>Acesse:</h2>
     </div>
 
  <!-- Login Form -->
@@ -214,7 +214,6 @@
 
 <div id="footer">
  <!-- FOOTER E CRÉDITOS. -->
-
  <div class="container">
       <div class="copyright">
         &copy; Copyright <strong><span>Medicina da Terra</span></strong>. All Rights Reserved
@@ -247,8 +246,7 @@
 
 
 </div>
-
-
-	
-</body>
+    
+	</style>
+  </body>
 </html>

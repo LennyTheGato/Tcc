@@ -1410,7 +1410,11 @@ section {
 
 /*--------------------------------------------------------------
 # Pricing
---------------------------------------------------------------*/
+--------------------------------------------------------------
+
+.row{
+  display:inline;
+}*/
 .pricing .box {
   padding: 20px;
   background: #fff;
@@ -1418,7 +1422,9 @@ section {
   box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.12);
   border-radius: 4px;
   position: relative;
-  overflow: hidden;
+  overflow: hidden;      
+  display: inline-block;
+
 }
 
 .pricing h3 {

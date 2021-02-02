@@ -35,6 +35,7 @@
 <link href="../assets/vendor/venobox/venobox.css" rel="stylesheet">
 <link href="../assets/vendor/aos/aos.css" rel="stylesheet">
 <link href="../assets/css/style.css" rel="stylesheet">
+<link href="../assets/css/post.css" rel="stylesheet">
 
 <!-- Template Main CSS File -->
 <link href="../assets/css/style.css" rel="stylesheet">
@@ -53,7 +54,6 @@
 	?>
 </div>
 </header>
-<br/><br/>
 
 
 </div>
@@ -65,11 +65,19 @@
 <!--///////////////////////////////////////////////////Empieza cuerpo del documento interno////////////////////////////////////////////-->
 <div class="row-fluid">
 
-  <br/><br/><br/><br/><br/><br/><br/><br/>
+  <br/><br/>
 
 
   <?php
 
+ echo"";
+ echo" <div class='container' data-aos='fade-up'>";
+
+     echo"<div class='section-title'>";
+     echo"<h2>POSTS EXCLUSIVOS</h2>";
+     echo"<p>Página dedicada aos alunos do medicina da terra</p>";
+     echo" </div>";  
+     echo" </div>";  
     require("connect_db.php");
     $sql=("SELECT * FROM blog");
 
@@ -80,14 +88,43 @@
       
   ?>
     
+
+    
+        
+        
+        
+        
+        
+        
+           
+            
+        
+     
+
   <?php 
      while($arreglo=mysqli_fetch_array($query)){
+          echo "<center>";
+          echo " <section class='blog-posts-home clearfix'>";
+          echo "<div class='post-container clearfix'>";
+         // IMAGEM AQUI JOAO echo "<a href='' class='blog-image'><img src= 'http://lorempixel.com/400/300/'/></a>"; //
+          echo "<div class='post'>";
 
 
-          echo "<br/><br/><br/><br/><b>$arreglo[1]</b><br/><br/>";
-          echo "$arreglo[2]";
+          echo "<h4>$arreglo[1]</h4>";
+          echo "<p class='blog-snippet'>$arreglo[2]</p>";
+          echo "<p></p>";
+          echo "<div class='read-more-button'><a  href=''>Read More</a></div>";
+          echo "<hr/>";
+          echo "<div class='blog-post-bottom'>";
+          echo "<p>Month, Day Year</p>";
+          echo "<i class='heart'><!--heart--></i>";
 
-        
+          echo "</div>";
+          echo " </div>";
+          echo " </div>";
+
+        echo "</section>";
+        echo "</center>";
        
   
     }

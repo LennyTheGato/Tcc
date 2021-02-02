@@ -44,27 +44,28 @@ session_start();
     <!-- ======= Pricing Section ======= -->
     <?php
     echo"</br></br></br>";
-    echo" <section id='pricing' class='pricing'>";
     echo" <div class='container' data-aos='fade-up'>";
 
         echo"<div class='section-title'>";
         echo"<h2>Conheça nossos cursos</h2>";
         echo"<p>Página dedicada à catalogação de cursos disponíveis</p>";
         echo" </div>";  
-        
-        echo "<div class='row'>";
-
+ 
 
 require("login/connect_db.php");
 $sql=("SELECT * FROM curso");
 
 $query=mysqli_query($mysqli,$sql);
 
-echo "<div class='col-lg-3 col-md-6 mt-4 mt-md-0'>";
-  echo "<div class='box featured' data-aos='fade-up' data-aos-delay='200'>";
-
  /////////////////////////////////////////////////////////// Loop pra acrescentar os cursos ///////////////////////////////////////////////////////////
 while($arreglo=mysqli_fetch_array($query)){
+  
+  echo" <section id='pricing' class='pricing'>";
+
+  echo "<div class='row'>";
+
+  echo "<div class='col-lg-3 col-md-6 mt-4 mt-md-0'>";
+  echo "<div class='box featured' data-aos='fade-up' data-aos-delay='200'>";
 
 
     echo "<h3>$arreglo[1]</h3>";
@@ -82,21 +83,21 @@ while($arreglo=mysqli_fetch_array($query)){
     echo "</ul>";
     
 
+    echo "<div/>";
+    echo "<div/>";
+    
+    
+    
+    
+    echo "<div/>";
+    echo "<div/>";
+     
+       echo"</section>"; 
 
 /////////////////////////////////////////////////////////// FIM do loop ///////////////////////////////////////////////////////////
 
 }
 
-echo "<div/>";
-echo "<div/>";
-
-
-
-
-echo "<div/>";
-echo "<div/>";
- 
-   echo"</section>"; 
     ?>
   
 
