@@ -87,16 +87,16 @@ if (@!$_SESSION['user']) {
 			?>
 			  
 			<?php 
-				 while($arreglo=mysqli_fetch_array($query)){
+				 while($arranjo=mysqli_fetch_array($query)){
 				  	echo "<tr class='success'>";
-				    	echo "<td>$arreglo[0]</td>";
-				    	echo "<td>$arreglo[1]</td>";
-				    	echo "<td>$arreglo[2]</td>";
-				    	echo "<td>$arreglo[3]</td>";
-				    	echo "<td>$arreglo[4]</td>";
+				    	echo "<td>$arranjo[0]</td>";
+				    	echo "<td>$arranjo[1]</td>";
+				    	echo "<td>$arranjo[2]</td>";
+				    	echo "<td>$arranjo[3]</td>";
+				    	echo "<td>$arranjo[4]</td>";
 
-				    	echo "<td><a href='atualizar.php?id=$arreglo[0]'><img src='../images/atualizar.gif' class='img-rounded'></td>";
-						echo "<td><a href='admin.php?id=$arreglo[0]&idborrar=2'><img src='../images/eliminar.png' class='img-rounded'/></a></td>";
+				    	echo "<td><a href='atualizar.php?id=$arranjo[0]'><img src='../images/atualizar.gif' class='img-rounded'></td>";
+						echo "<td><a href='admin.php?id=$arranjo[0]&idborrar=2'><img src='../images/eliminar.png' class='img-rounded'/></a></td>";
 						
 
 						

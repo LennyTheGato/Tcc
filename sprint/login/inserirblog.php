@@ -39,6 +39,7 @@ if (@!$_SESSION['user']) {
 <div class="row">
 	<?php
 	include("../include/header3.php");
+	
 	?>
 </div>
 </header>
@@ -46,6 +47,12 @@ if (@!$_SESSION['user']) {
 
 <form method="POST" action="" role="form" class="php-email-form">
 
+	<div class="col form-group">
+		<label for="img">
+			<b>Escolha uma Imagem</b>
+			</label>
+		<input type="file" id="img" name="imagem" accept="image/*,gif/*">
+	</div>
 
 	<div class="col form-group">
 		
@@ -53,6 +60,14 @@ if (@!$_SESSION['user']) {
 				<b>Digite o Título</b> 
 			</label>
 			<input type="text" name="titulo" class="form-control" placeholder="Coloque seu Título"/>
+
+	</div>
+
+	<div class="form-group">
+		<label>
+			<b>Digite uma Prévia</b>
+		</label>
+            <input type="text" name="previa" class="form-control" placeholder="Digite sua prévia"/>
 
 	</div>
 
@@ -64,9 +79,17 @@ if (@!$_SESSION['user']) {
 
 	</div>
 
-	
 
-      
+
+
+	<?php
+
+date_default_timezone_set('America/Sao_Paulo');
+$tempo = date('Y/d/m h:i:s a', time());
+echo "<input type='hidden' name='datapost' value='$tempo'>";
+
+?>
+
 	<div class="text-center">
     <button type="submit" name="submit" value="Postar!">Postar!</button>
 	</div>
@@ -120,13 +143,13 @@ if (@!$_SESSION['user']) {
 			?>
 			  
 			<?php 
-				 while($arreglo=mysqli_fetch_array($query)){
+				 while($arranjo=mysqli_fetch_array($query)){
 				  	echo "<tr class='success'>";
-				    	echo "<td>$arreglo[0]</td>";
-				    	echo "<td>$arreglo[1]</td>";
+				    	echo "<td>$arranjo[0]</td>";
+				    	echo "<td>$arranjo[1]</td>";
 
 
-						echo "<td><a href='inserirblog.php?id=$arreglo[0]&idborrar=2'><img src='../images/eliminar.png' class='img-rounded'/></a></td>";
+						echo "<td><a href='inserirblog.php?id=$arranjo[0]&idborrar=2'><img src='../images/eliminar.png' class='img-rounded'/></a></td>";
 						
 
 						

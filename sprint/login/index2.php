@@ -79,13 +79,21 @@
      echo" </div>";  
      echo" </div>";  
     require("connect_db.php");
-    $sql=("SELECT * FROM blog");
 
-//la variable  $mysqli viene de connect_db que lo traigo con el require("connect_db.php");
+    $sql=("SELECT * FROM blog");
+    //la variable  $mysqli viene de connect_db que lo traigo con el require("connect_db.php");
     $query=mysqli_query($mysqli,$sql);
 
 
-      
+    $comentado=("SELECT * FROM comentario");
+    $dentro=mysqli_query($mysqli,$comentado);
+
+    $_SESSION['usuario'] = $_SESSION['user'];
+    $usuario = $_SESSION['usuario'];
+
+
+    
+    
   ?>
     
 
@@ -102,22 +110,23 @@
      
 
   <?php 
-     while($arreglo=mysqli_fetch_array($query)){
+  $usuario = $_SESSION['user'];
+     while($arranjo=mysqli_fetch_array($query)){
           echo "<center>";
-          echo " <section class='blog-posts-home clearfix'>";
+          echo "<section class='blog-posts-home clearfix'>";
           echo "<div class='post-container clearfix'>";
-         // IMAGEM AQUI JOAO echo "<a href='' class='blog-image'><img src= 'http://lorempixel.com/400/300/'/></a>"; //
+          echo "<img class='blog-image' src='../assets/img/$arranjo[5]'/>";
           echo "<div class='post'>";
 
 
-          echo "<h4>$arreglo[1]</h4>";
-          echo "<p class='blog-snippet'>$arreglo[2]</p>";
+          echo "<h4>$arranjo[1]</h4>";
+          echo "<p class='blog-snippet'>$arranjo[3]</p>";
           echo "<p></p>";
-          echo "<div class='read-more-button'><a  href=''>Read More</a></div>";
+          echo "<div class='read-more-button'> <a href='#popup$arranjo[0]'>Read More</a></div>";
           echo "<hr/>";
           echo "<div class='blog-post-bottom'>";
-          echo "<p>Month, Day Year</p>";
-          echo "<i class='heart'><!--heart--></i>";
+          echo "<i><p>$arranjo[4]</p></i>";
+
 
           echo "</div>";
           echo " </div>";
@@ -126,11 +135,78 @@
         echo "</section>";
         echo "</center>";
        
+        echo  "<div id='popup$arranjo[0]' class='popup5'>";
+        echo     "<div class='popup'>";
+        echo       "<br/><br/><h2>$arranjo[1]</h2><br/><br/>";
+        echo     "<a class='close' href='#'>&times;</a>";
+        echo    "<div class='popup2'>";
+        echo     "<br/><br/>$arranjo[2]<br/><br/>";
+        echo     "<i><p>$arranjo[4]</p></i>";
+        echo    "</div>";
+        echo  "Comente algo: <br/>";
+
+        /////////////////////////////////////COMENTARIOS////////////////////////////////////////////////////
+
+        echo  "<form method='POST' action='comentario.php' role='form'>"; 
+        echo  "<input type='hidden' name='usuario' value='$usuario'>";
+        echo  "<textarea name='comentario' rows='5' data-rule='required' data-msg='Please write something for us' placeholder='Nos deixe um comentário!'></textarea>"; 
+        echo  "<button type='submit' name='envcom' value='Comentar'>Enviar Comentário</button>"; 
+        echo  "</form>"; 
+        
+        while($sequencia=mysqli_fetch_array($dentro)){
+        echo   "$sequencia[2]";
+        echo "<br/> Comentou: $sequencia[1] <br/><br/><br/>";
+        }
+
+        /////////////////////////////////////FIM COMENTARIOS////////////////////////////////////////////////////
+
+        echo  "</div>";  
+        echo "</div>";
   
     }
 
   ?>
   
+
+  <!--------
+                <form method="POST" action="proc_cad_msg.php" role="form" class="php-email-form">
+              <div class="form-row">
+
+                <div class="col form-group">
+                <input type="text" name="nome" class="form-control" id="id_nome" placeholder="Digite seu nome" data-rule="minlen:4" data-msg="Mínimo 4 caracteres" />
+                  <div class="validate"></div>
+                </div>
+
+                <div class="col form-group">
+                  <input type="email" class="form-control" name="email" id="id_email" placeholder="Seu email" data-rule="email" data-msg="Please enter a valid email" />
+                  <div class="validate"></div>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <input type="number" class="form-control" name="telefone" id="id_telefone" placeholder="Telefone" data-rule="minlen:4" data-msg="Mínimo 8 números." />
+                <div class="validate"></div>
+              </div>
+
+              <div class="form-group">
+                <textarea class="form-control" id="id_mensagem" name="mensagem" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Mensagem"></textarea>
+                <div class="validate"></div>
+              </div>
+              <div class="mb-3">
+                <div class="loading">Loading</div>
+                <div class="error-message"></div>
+                <div class="sent-message">Sua mensagem foi enviada, obrigada!</div>
+              </div>
+
+              <div class="text-center">
+              <button type="submit" name="SendCadCont" value="Cadastrar">Enviar Mensagem</button>
+              </div>
+  
+
+
+                  </form>
+  --------->
+
       
             
     

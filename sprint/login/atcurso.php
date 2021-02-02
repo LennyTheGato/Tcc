@@ -88,7 +88,7 @@ if (@!$_SESSION['user']) {
 		<form action="exatcurso.php" method="post">
 				Id<br><input type="text" name="id" value= "<?php echo $id ?>" readonly="readonly"><br>
 				Título<br> <input type="text" name="titulo" value="<?php echo $titulo?>"><br>
-				Preço<br> <input type="number" name="preço" value="<?php echo $preço?>"><br>
+				Preço<br> <input type="number" name="preço" step="0.010" value="<?php echo $preço?>"><br>
 				Conteudo1<br> <input type="text" name="conteudo1" value="<?php echo $conteudo1?>"><br>
 				Conteudo2<br> <input type="text" name="conteudo2" value="<?php echo $conteudo2?>"><br>
 				Conteudo3<br> <input type="text" name="conteudo3" value="<?php echo $conteudo3?>"><br>

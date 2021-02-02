@@ -50,60 +50,66 @@ session_start();
         echo"<h2>Conheça nossos cursos</h2>";
         echo"<p>Página dedicada à catalogação de cursos disponíveis</p>";
         echo" </div>";  
- 
 
-require("login/connect_db.php");
-$sql=("SELECT * FROM curso");
+  ?>
 
-$query=mysqli_query($mysqli,$sql);
 
- /////////////////////////////////////////////////////////// Loop pra acrescentar os cursos ///////////////////////////////////////////////////////////
-while($arreglo=mysqli_fetch_array($query)){
-  
-  echo" <section id='pricing' class='pricing'>";
+
+  <?php
+
+  require("login/connect_db.php");
+  $sql=("SELECT * FROM curso");
+
+  $query=mysqli_query($mysqli,$sql);
 
   echo "<div class='row'>";
 
-  echo "<div class='col-lg-3 col-md-6 mt-4 mt-md-0'>";
-  echo "<div class='box featured' data-aos='fade-up' data-aos-delay='200'>";
+  /////////////////////////////////////////////////////////// Loop pra acrescentar os cursos ///////////////////////////////////////////////////////////
+  while($arranjo=mysqli_fetch_array($query)){
+    
+    echo" <section id='pricing' class='pricing'>";
 
 
-    echo "<h3>$arreglo[1]</h3>";
-    echo "<h4><sup>R$</sup>$arreglo[2]<span> / month</span></h4>";
-    echo "<ul>";
-      echo "<li>$arreglo[3]</li>";
-      echo "<li>$arreglo[4]</li>";
-      echo "<li>$arreglo[5]</li>";
-      echo "<li>$arreglo[6]</li>";
+    echo "<div class='col-lg-10 col-md-6 mt-4 mt-md-0'>";
+    echo "<div class='box featured' data-aos='fade-up' data-aos-delay='200'>";
+
+
+      echo "<h3>$arranjo[1]</h3>";
+      echo "<h4><sup>R$</sup>$arranjo[2]<span> / month</span></h4>";
+      echo "<ul>";
+        echo "<li>$arranjo[3]</li>";
+        echo "<li>$arranjo[4]</li>";
+        echo "<li>$arranjo[5]</li>";
+        echo "<li>$arranjo[6]</li>";
+        
+        echo "<div class='btn-wrap'>";
+          echo "<a href='#' class='btn-buy'>Comprar</a>";
+        echo "<div/>";
+
+      echo "</ul>";
       
-      echo "<div class='btn-wrap'>";
-        echo "<a href='#' class='btn-buy'>Comprar</a>";
+
       echo "<div/>";
+      echo "<div/>";
+      
+      
+      
+      
+      echo "<div/>";
+  
+      
+        echo"</section>"; 
 
-    echo "</ul>";
-    
+  /////////////////////////////////////////////////////////// FIM do loop ///////////////////////////////////////////////////////////
 
+    }
     echo "<div/>";
-    echo "<div/>";
-    
-    
-    
-    
-    echo "<div/>";
-    echo "<div/>";
-     
-       echo"</section>"; 
 
-/////////////////////////////////////////////////////////// FIM do loop ///////////////////////////////////////////////////////////
-
-}
-
-    ?>
+      ?>
   
 
 
 
-  <a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
 
   <!-- Vendor JS Files -->
   <script src="assets/vendor/jquery/jquery.min.js"></script>
