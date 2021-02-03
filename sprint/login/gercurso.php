@@ -33,6 +33,7 @@ if (@!$_SESSION['user']) {
 <link href="../assets/vendor/venobox/venobox.css" rel="stylesheet">
 <link href="../assets/vendor/aos/aos.css" rel="stylesheet">
 <link href="../assets/css/style.css" rel="stylesheet">
+<link href="../assets/css/manage.css" rel="stylesheet">
 
 <!-- Template Main CSS File -->
 <link href="../assets/css/style.css" rel="stylesheet">
@@ -40,7 +41,12 @@ if (@!$_SESSION['user']) {
   <!-- Terminar os metas -->
   <title>Administração</title>
   </head>
-<body>
+
+
+
+
+
+  <body>
 <div class="container">
 <header class="header">
 <div class="row">
@@ -50,19 +56,32 @@ if (@!$_SESSION['user']) {
 </div>
 </header>
 
+    <!-- ======= Pricing Section ======= -->
+    <?php
+    echo"</br>";
+    echo" <div class='container' data-aos='fade-up'>";
+
+        echo"<div class='section-title'>";
+        echo"<h2>Gerenciamento de cursos</h2>";
+        echo"<p>Abaixo, acrescente os cursos e admnistre-os.</p>";
+        echo" </div>";  echo" </div>";  
+
+  ?> 
 
 <div class="row">
 	
 	
 		
-	<div class="span12">
+	
 
 		<div class="caption">
+		<div class="fundo">   
+
 		
 <!--///////////////////////////////////////////////////Empieza cuerpo del documento interno////////////////////////////////////////////-->
 		<div class="row-fluid">
 		
-			<br/><br/><br/><br/><br/><br/><br/><br/>
+			<br/>
 
 
 			<?php
@@ -74,8 +93,11 @@ if (@!$_SESSION['user']) {
 				<!--////////////////////////////////////////////Começo do add curso;////////////////////////////////////////////-->
 
 	
+				<div class="span11">
 
-
+				<div class="fundo">   
+<div class='container' data-aos='fade-up'><div class='section-title'><br>
+<h2>Adicione cursos:</h2></div></div>
 				<form method="POST" action="" role="form" class="php-email-form">
 		
 		
@@ -138,7 +160,7 @@ if (@!$_SESSION['user']) {
 				
 			
 			
-			</form>
+			</form></div></div>
 			
 			<?php
 					if(isset($_POST['submit'])){
@@ -148,7 +170,7 @@ if (@!$_SESSION['user']) {
 		
 		
 		
-		<br/><br/><br/><br/><br/><br/><br/><br/>
+		<br/><br/><br/><br/>
 
 		
 			
@@ -163,10 +185,10 @@ if (@!$_SESSION['user']) {
 						echo "<td>id</td>";
 						echo "<td>Título</td>";
 						echo "<td>Preço</td>";
-						echo "<td>Conteudo 1</td>";
-						echo "<td>Conteudo 2</td>";
-						echo "<td>Conteudo 3</td>";
-						echo "<td>Conteudo 4</td>";
+						echo "<td>Conteúdo 1</td>";
+						echo "<td>Conteúdo 2</td>";
+						echo "<td>Conteúdo 3</td>";
+						echo "<td>Conteúdo 4</td>";
 
 						echo "<td>Editar</td>";
 						echo "<td>Excluir</td>";
@@ -186,9 +208,12 @@ if (@!$_SESSION['user']) {
 						echo "<td>$arranjo[5]</td>";
 						echo "<td>$arranjo[6]</td>";
 
-				    	echo "<td><a href='atcurso.php?id=$arranjo[0]'><img src='../images/atualizar.gif' class='img-rounded'></td>";
-						echo "<td><a href='gercurso.php?id=$arranjo[0]&idborrar=2'><img src='../images/eliminar.png' class='img-rounded'/></a></td>";
-						
+
+						echo "<td><a href='atcurso.php?id=$arranjo[0]' class='botao_alterar'>Alterar</td>";
+						/*echo "<td><a href='atcurso.php?id=$arranjo[0]'><img src='../images/atualizar.gif' class='img-rounded'></td>";
+						echo "<td><a href='gercurso.php?id=$arranjo[0]&idborrar=2'><img src='../images/eliminar.png' class='img-rounded'/></a></td>";*/
+						echo "<td><a href='gercurso.php?id=$arranjo[0]&idborrar=2' class='botao_apagar'>Apagar</a></td>";
+
 
 						
 					echo "</tr>";

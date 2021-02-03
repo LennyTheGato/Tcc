@@ -30,6 +30,9 @@ if (@!$_SESSION['user']) {
 <link href="../assets/vendor/venobox/venobox.css" rel="stylesheet">
 <link href="../assets/vendor/aos/aos.css" rel="stylesheet">
 <link href="../assets/css/style.css" rel="stylesheet">
+<link href="../assets/css/login.css" rel="stylesheet">
+<link href="../assets/css/manage.css" rel="stylesheet">
+<link href="../assets/css/post.css" rel="stylesheet">
 
 <!-- Template Main CSS File -->
 <link href="../assets/css/style.css" rel="stylesheet">
@@ -48,7 +51,17 @@ if (@!$_SESSION['user']) {
 </header>
 
 
-<div class="row">
+<?php
+    echo"</br>";
+    echo" <div class='container' data-aos='fade-up'>";
+
+        echo"<div class='section-title'>";
+        echo"<h2>Administrar Cursos Cadastrados</h2>";
+        echo"<p>Edição de cursos</p>";
+        echo" </div>";  echo" </div>";  
+
+  ?>
+
 	
 	
 		
@@ -57,11 +70,7 @@ if (@!$_SESSION['user']) {
 		<div class="caption">
 		
 <!--///////////////////////////////////////////////////Empieza cuerpo del documento interno////////////////////////////////////////////-->
-<br/><br/><br/><br/><br/><br/><br/>
-		<h2> Administrar Usuarios Cadastrados</h2>	
-		<div class="well well-small">
-		<hr class="soft"/>
-		<h4>Edição de Usuários</h4>
+
 		<div class="row-fluid">
 		
 		<?php
@@ -84,20 +93,59 @@ if (@!$_SESSION['user']) {
 
 
 		?>
-
+<div class="span11">
+	
+<div class="fundo">   
+<div class='container' data-aos='fade-up'><div class='section-title'><br>
+<h2>Editor de cursos:</h2></div></div>
 		<form action="exatcurso.php" method="post">
-				Id<br><input type="text" name="id" value= "<?php echo $id ?>" readonly="readonly"><br>
-				Título<br> <input type="text" name="titulo" value="<?php echo $titulo?>"><br>
-				Preço<br> <input type="number" name="preço" step="0.010" value="<?php echo $preço?>"><br>
-				Conteudo1<br> <input type="text" name="conteudo1" value="<?php echo $conteudo1?>"><br>
-				Conteudo2<br> <input type="text" name="conteudo2" value="<?php echo $conteudo2?>"><br>
-				Conteudo3<br> <input type="text" name="conteudo3" value="<?php echo $conteudo3?>"><br>
-				Conteudo4<br> <input type="text" name="conteudo4" value="<?php echo $conteudo4?>"><br>
+			
+		<label>
+			<b>Id:</b>
+		</label><br>
+				
+				<input type="text" name="id" value= "<?php echo $id ?>" readonly="readonly"><br>
+
+
+
+							
+		<label>
+			<b>Título:</b>
+		</label><br> <input type="text" name="titulo" value="<?php echo $titulo?>"><br>
+
+
+							
+		<label>
+			<b>Preço:</b>
+		</label><br> <input type="text" class="form-control-cinza" name="preço" step="0.010" value="<?php echo $preço?>"><br>
+
+
+							
+		<label>
+			<b>Conteúdo 1:</b>
+		</label><br> <input type="text" name="conteudo1" value="<?php echo $conteudo1?>"><br>
+
+
+		<label>
+			<b>Conteúdo 2:</b>
+		</label><br> <input type="text" name="conteudo2" value="<?php echo $conteudo2?>"><br>
+
+
+		<label>
+			<b>Conteúdo 3:</b>
+		</label><br> <input type="text" name="conteudo3" value="<?php echo $conteudo3?>"><br>
+
+
+		<label>
+			<b>Conteúdo 4:</b>
+		</label><br> <input type="text" name="conteudo4" value="<?php echo $conteudo4?>"><br>
+
 
 				
 				<br>
 				<input type="submit" value="Guardar" class="btn btn-success btn-primary">
 			</form>
+			</div></div></div>
 
 				  
 		
@@ -129,7 +177,7 @@ if (@!$_SESSION['user']) {
 </div>
 
 	</div>
-</div>
+</div></div>
 
 <div id="footer">
  <!-- FOOTER E CRÉDITOS. -->

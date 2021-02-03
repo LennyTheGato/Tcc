@@ -25,6 +25,8 @@ if (@!$_SESSION['user']) {
 <link href="../assets/vendor/venobox/venobox.css" rel="stylesheet">
 <link href="../assets/vendor/aos/aos.css" rel="stylesheet">
 <link href="../assets/css/style.css" rel="stylesheet">
+<link href="../assets/css/manage.css" rel="stylesheet">
+<link href="../assets/css/login.css" rel="stylesheet">
 
 <!-- Template Main CSS File -->
 <link href="../assets/css/style.css" rel="stylesheet">
@@ -34,6 +36,7 @@ if (@!$_SESSION['user']) {
   <title>Adminstração</title>
   </head>
 <body>
+
 <div class="container">
 <header class="header">
 <div class="row">
@@ -42,26 +45,41 @@ if (@!$_SESSION['user']) {
 	
 	?>
 </div>
+
 </header>
-<br/><br/><br/><br/><br/><br/>
+ <!-- ======= Pricing Section ======= -->
+ <?php
+    echo"</br>";
+    echo" <div class='container' data-aos='fade-up'>";
+
+        echo"<div class='section-title'>";
+        echo"<h2>Inserção de texto</h2>";
+        echo"<p>Página para controle e inserção de textos publicados ao usuário.</p>";
+        echo" </div>";  echo" </div>";  
+
+  ?>
+
+
+<div class="span11">
+
+<div class="caption">
+
+<div class="fundo">   
+<div class='container' data-aos='fade-up'><div class='section-title'><br>
+<h2>Editor de texto:</h2></div></div>
 
 <form method="POST" action="" role="form" class="php-email-form">
 
-	<div class="col form-group">
-		<label for="img">
-			<b>Escolha uma Imagem</b>
-			</label>
-		<input type="file" id="img" name="imagem" accept="image/*,gif/*">
-	</div>
-
-	<div class="col form-group">
-		
-			<label>
-				<b>Digite o Título</b> 
-			</label>
-			<input type="text" name="titulo" class="form-control" placeholder="Coloque seu Título"/>
+	<div class="form-group"> 
+		<label> 
+			<b>Digite o Título</b>
+		</label>
+            <input type="text" name="titulo" class="form-control" placeholder="Coloque seu Título"/>
 
 	</div>
+	</div>
+
+
 
 	<div class="form-group">
 		<label>
@@ -70,15 +88,21 @@ if (@!$_SESSION['user']) {
             <input type="text" name="previa" class="form-control" placeholder="Digite sua prévia"/>
 
 	</div>
+	</div>
 
     <div class="form-group">
 		<label>
 			<b>Digite o Texto</b>
 		</label>
-            <input type="text" name="texto" class="form-control" placeholder="Digite seu texto"/>
+            <input type="text" name="texto" class="form-control" placeholder="Digite seu texto" ></textarea>
 
 	</div>
-
+	<div class="col form-group">
+		<label for="img">
+			<b>Escolha uma Imagem</b>
+			</label>
+		<input type="file" id="img" name="imagem" accept="image/*,gif/*">
+	</div>
 
 
 
@@ -97,8 +121,7 @@ echo "<input type='hidden' name='datapost' value='$tempo'>";
 	
 
 
-</form>
-
+</form></div>
 <?php
 		if(isset($_POST['submit'])){
 			require("registroblog.php");
@@ -109,19 +132,10 @@ echo "<input type='hidden' name='datapost' value='$tempo'>";
 <!--///////////////////////////////////////////////////EDITAR////////////////////////////////////////////-->
 
 
-            
-<div class="row">
-	
-	
-		
-	<div class="span12">
-
-		<div class="caption">
-		
 
 		<div class="row-fluid">
 		
-			<br/><br/><br/><br/><br/><br/><br/><br/>
+			<br/>
 
 
 			<?php
@@ -148,8 +162,9 @@ echo "<input type='hidden' name='datapost' value='$tempo'>";
 				    	echo "<td>$arranjo[0]</td>";
 				    	echo "<td>$arranjo[1]</td>";
 
-
-						echo "<td><a href='inserirblog.php?id=$arranjo[0]&idborrar=2'><img src='../images/eliminar.png' class='img-rounded'/></a></td>";
+						
+						echo "<td><a href='inserirblog.php?id=$arranjo[0]&idborrar=2' class='botao_apagar'>Apagar</a></td>";
+						/* echo "<td><a href='inserirblog.php?id=$arranjo[0]&idborrar=2'><img src='../images/eliminar.png' class='img-rounded'/></a></td>";*/
 						
 
 						
@@ -184,6 +199,7 @@ echo "<input type='hidden' name='datapost' value='$tempo'>";
 
 
 
+</div>
 </div>
 
 

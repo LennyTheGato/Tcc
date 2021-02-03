@@ -25,6 +25,8 @@ if (@!$_SESSION['user']) {
 <link href="../assets/vendor/venobox/venobox.css" rel="stylesheet">
 <link href="../assets/vendor/aos/aos.css" rel="stylesheet">
 <link href="../assets/css/style.css" rel="stylesheet">
+<link href="../assets/css/manage.css" rel="stylesheet">
+
 
 <!-- Template Main CSS File -->
 <link href="../assets/css/style.css" rel="stylesheet">
@@ -33,6 +35,7 @@ if (@!$_SESSION['user']) {
 
   <title>Adminstração</title>
   </head>
+  
 <body>
 <div class="container">
 <header class="header">
@@ -43,9 +46,20 @@ if (@!$_SESSION['user']) {
 </div>
 </header>
 
+    <!-- ======= Pricing Section ======= -->
+    <?php
+    echo"</br>";
+    echo" <div class='container' data-aos='fade-up'>";
+
+        echo"<div class='section-title'>";
+        echo"<h2>Mensagens</h2>";
+        echo"<p>As mensagens enviadas pelos usuários na aba Contato aparecerão aqui.</p>";
+        echo" </div>";  echo" </div>";  
+
+  ?>
 
 
-</div>
+
 
 <div class="span12">
 
@@ -54,7 +68,7 @@ if (@!$_SESSION['user']) {
 <!--///////////////////////////////////////////////////Empieza cuerpo del documento interno////////////////////////////////////////////-->
 <div class="row-fluid">
 
-  <br/><br/><br/><br/><br/><br/><br/><br/>
+  <br/>
 
 
   <?php
@@ -87,8 +101,8 @@ if (@!$_SESSION['user']) {
           echo "<td>$arranjo[3]</td>";
           echo "<td>$arranjo[4]</td>";
 
-        echo "<td><a href='Mensagens.php?id=$arranjo[0]&idborrar=2'><img src='../images/eliminar.png' class='img-rounded'/></a></td>";
         
+        echo "<td><a href='Mensagens.php?id=$arranjo[0]&idborrar=2' class='botao_apagar'>Apagar</a></td>";
 
         
       echo "</tr>";

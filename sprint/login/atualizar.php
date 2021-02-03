@@ -30,6 +30,9 @@ if (@!$_SESSION['user']) {
 <link href="../assets/vendor/venobox/venobox.css" rel="stylesheet">
 <link href="../assets/vendor/aos/aos.css" rel="stylesheet">
 <link href="../assets/css/style.css" rel="stylesheet">
+<link href="../assets/css/manage.css" rel="stylesheet">
+<link href="../assets/css/post.css" rel="stylesheet">
+<link href="../assets/css/login.css" rel="stylesheet">
 
 <!-- Template Main CSS File -->
 <link href="../assets/css/style.css" rel="stylesheet">
@@ -47,8 +50,17 @@ if (@!$_SESSION['user']) {
 </div>
 </header>
 
+<?php
+    echo"</br>";
+    echo" <div class='container' data-aos='fade-up'>";
 
-<div class="row">
+        echo"<div class='section-title'>";
+        echo"<h2>Administrar Usuarios Cadastrados</h2>";
+        echo"<p>Edição de Usuários</p>";
+        echo" </div>";  echo" </div>";  
+
+  ?>
+
 	
 	
 		
@@ -57,13 +69,7 @@ if (@!$_SESSION['user']) {
 		<div class="caption">
 		
 <!--///////////////////////////////////////////////////Empieza cuerpo del documento interno////////////////////////////////////////////-->
-<br/><br/><br/><br/><br/><br/><br/>
-		<h2> Administrar Usuarios Cadastrados</h2>	
-		<div class="well well-small">
-		<hr class="soft"/>
-		<h4>Edição de Usuários</h4>
-		<div class="row-fluid">
-		
+<br/>
 		<?php
 		extract($_GET);
 		require("connect_db.php");
@@ -82,17 +88,42 @@ if (@!$_SESSION['user']) {
 
 
 		?>
+<div class="span11">
+
+<div class="fundo">   
+<div class='container' data-aos='fade-up'><div class='section-title'><br>
+<h2>Editor de texto:</h2></div></div>
 
 		<form action="exatualizar.php" method="post">
-				Id<br><input type="text" name="id" value= "<?php echo $id ?>" readonly="readonly"><br>
-				Usuário<br> <input type="text" name="user" value="<?php echo $user?>"><br>
-				Senha<br> <input type="text" name="pass" value="<?php echo $pass?>"><br>
-				E-mail<br> <input type="text" name="email" value="<?php echo $email?>"><br>
-				Senha Administrador<br> <input type="text" name="passadmin" value="<?php echo $passadmin?>"><br>
+
+		<label>
+			<b>Id:ㅤㅤ</b>
+		</label>
+		<input type="text" name="id" value= "<?php echo $id ?>" readonly="readonly"><br>
+
+
+
+		<label>
+			<b>Usuário:</b>
+		</label>  <input type="text" name="user" value="<?php echo $user?>"><br>
+
+
+		<label>
+			<b>Senha:</b>
+		</label>  <input type="text" name="pass" value="<?php echo $pass?>"><br>
+
+
+		<label>
+			<b>Email:</b>
+		</label>  <input type="text" name="email" value="<?php echo $email?>"><br>
+
 				
-				<br>
+		<label>
+			<b>Senha: </b>
+		</label> <input type="text" name="passadmin" value="<?php echo $passadmin?>" placeholder="Senha administrador"><br>
+				
 				<input type="submit" value="Guardar" class="btn btn-success btn-primary">
-			</form>
+			</form></div><br>
 
 				  
 		
@@ -100,8 +131,8 @@ if (@!$_SESSION['user']) {
 		<div class="span8">
 		
 		</div>	
-		</div>	
-		<br/>
+		</div>			</div>			</div>	
+	
 		
 
 
@@ -125,7 +156,7 @@ if (@!$_SESSION['user']) {
 
 	</div>
 </div>
-
+<br><br>
 <div id="footer">
  <!-- FOOTER E CRÉDITOS. -->
 

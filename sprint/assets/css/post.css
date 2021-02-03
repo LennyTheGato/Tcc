@@ -2,7 +2,6 @@
 /* Começo do popup */
 
 .popup4{
-  width: 40%;
   margin: 0 auto;
   background: rgba(255,255,255,0.2);
   padding: 35px;
@@ -20,7 +19,7 @@
   border-radius: 20px/50px;
   text-decoration: none;
   cursor: pointer;
-  transition: all 0.3s ease-out;
+ /* transition: all 0.3s ease-out;*/
 }
 .popup3:hover {
   background: #06D85F;
@@ -33,7 +32,7 @@
   left: 0;
   right: 0;
   background: rgba(0, 0, 0, 0.7);
-  transition: opacity 500ms;
+ /* transition: opacity 500ms; */
   visibility: hidden;
   opacity: 0;
 }
@@ -43,13 +42,17 @@
 }
 
 .popup {
-  margin: 70px auto;
-  padding: 20px;
-  background: #fff;
-  border-radius: 5px;
-  width: 30%;
-  position: relative;
-  transition: all 5s ease-in-out;
+    margin: 70px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 5px;
+    width: 70%;
+    position: relative;
+    transition: all 5s ease-in-out;
+    overflow-y: scroll !important;
+    max-height: 75%;
+
+
 }
 
 .popup h2 {

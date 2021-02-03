@@ -32,6 +32,7 @@ if (@!$_SESSION['user']) {
 <link href="../assets/vendor/venobox/venobox.css" rel="stylesheet">
 <link href="../assets/vendor/aos/aos.css" rel="stylesheet">
 <link href="../assets/css/style.css" rel="stylesheet">
+<link href="../assets/css/manage.css" rel="stylesheet">
 
 <!-- Template Main CSS File -->
 <link href="../assets/css/style.css" rel="stylesheet">
@@ -49,19 +50,43 @@ if (@!$_SESSION['user']) {
 </div>
 </header>
 
+    
+    
+   <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" crossorigin="anonymous"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+	</body>
 
-<div class="row">
+
+
+
+
+    <!-- ======= Pricing Section ======= -->
+    <?php
+    echo"</br></br></br>";
+    echo" <div class='container' data-aos='fade-up'>";
+
+        echo"<div class='section-title'>";
+        echo"<h2>Gestão de usuários</h2>";
+        echo"<p>Fichamento, alteração de senha e exclusões de conta pelo administrador.</p>";
+        echo" </div>";  
+
+  ?>
+
+
+
 	
 	
 		
 	<div class="span12">
 
-		<div class="caption">
+		<div class="container">
 		
 <!--///////////////////////////////////////////////////Empieza cuerpo del documento interno////////////////////////////////////////////-->
 		<div class="row-fluid">
 		
-			<br/><br/><br/><br/><br/><br/><br/><br/>
+	
+
 
 
 			<?php
@@ -71,6 +96,9 @@ if (@!$_SESSION['user']) {
 	
 //la variable  $mysqli viene de connect_db que lo traigo con el require("connect_db.php");
 				$query=mysqli_query($mysqli,$sql);
+
+
+				echo "<div class='overflow-x:auto;'>";
 
 				echo "<table border='1'; class='table table-hover';>";
 					echo "<tr class='warning'>";
@@ -83,7 +111,10 @@ if (@!$_SESSION['user']) {
 						echo "<td>Excluir</td>";
 					echo "</tr>";
 
-			    
+
+					
+				
+
 			?>
 			  
 			<?php 
@@ -94,17 +125,17 @@ if (@!$_SESSION['user']) {
 				    	echo "<td>$arranjo[2]</td>";
 				    	echo "<td>$arranjo[3]</td>";
 				    	echo "<td>$arranjo[4]</td>";
-
-				    	echo "<td><a href='atualizar.php?id=$arranjo[0]'><img src='../images/atualizar.gif' class='img-rounded'></td>";
-						echo "<td><a href='admin.php?id=$arranjo[0]&idborrar=2'><img src='../images/eliminar.png' class='img-rounded'/></a></td>";
+						/*<i class=' edit fa fa-pencil-square-o' aria-hidden='true'></i><a href='#' class='hid btn btn-success'>Edite</a>*/
+				    	echo "<td><a href='atualizar.php?id=$arranjo[0]' class='botao_alterar'>Alterar</td>";
+						echo "<td><a href='admin.php?id=$arranjo[0]&idborrar=2' class='botao_apagar'>Apagar</a></td>";
 						
 
 						
 					echo "</tr>";
 				}
 
-				echo "</table>";
-
+				echo "</table>"; echo "</div>";
+			
 					extract($_GET);
 					if(@$idborrar==2){
 		
@@ -114,7 +145,7 @@ if (@!$_SESSION['user']) {
 						//header('Location: proyectos.php');
 						echo "<script>location.href='admin.php'</script>";
 					}
-
+					echo" </div>";  
 			?>
 			
 				  
@@ -183,7 +214,7 @@ if (@!$_SESSION['user']) {
   <script src="../assets/js/main.js"></script>
 
 
-</div>
+
 
 
 </div>
