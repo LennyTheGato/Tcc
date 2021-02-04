@@ -6,6 +6,10 @@
 	$previa=$_POST['previa'];
 	$tempo=$_POST['datapost'];
 	$imagem=$_POST['imagem'];
+
+
+	
+
 	
 
 

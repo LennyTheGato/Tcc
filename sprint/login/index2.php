@@ -85,11 +85,11 @@
     $query=mysqli_query($mysqli,$sql);
 
 
-    $comentado=("SELECT * FROM comentario");
-    $dentro=mysqli_query($mysqli,$comentado);
+    //$comentado=("SELECT * FROM comentario");
+    //$dentro=mysqli_query($mysqli,$comentado);
 
-    $_SESSION['usuario'] = $_SESSION['user'];
-    $usuario = $_SESSION['usuario'];
+   // $_SESSION['usuario'] = $_SESSION['user'];
+   //$usuario = $_SESSION['usuario'];
 
 
     
@@ -135,6 +135,7 @@
         echo "</section>";
         echo "</center>";
        
+       
         echo  "<div id='popup$arranjo[0]' class='popup5'>";
         echo     "<div class='popup'>";
         echo       "<br/><br/><h2>$arranjo[1]</h2><br/><br/>";
@@ -142,25 +143,49 @@
         echo    "<div class='popup2'>";
         echo     "<br/><br/>$arranjo[2]<br/><br/>";
         echo     "<i><p>$arranjo[4]</p></i>";
+
         echo    "</div>";
-        echo  "Comente algo: <br/>";
+
 
         /////////////////////////////////////COMENTARIOS////////////////////////////////////////////////////
 
-        echo  "<form method='POST' action='comentario.php' role='form'>"; 
-        echo  "<input type='hidden' name='usuario' value='$usuario'>";
-        echo  "<textarea name='comentario' rows='5' data-rule='required' data-msg='Please write something for us' placeholder='Nos deixe um comentário!'></textarea>"; 
-        echo  "<button type='submit' name='envcom' value='Comentar'>Enviar Comentário</button>"; 
-        echo  "</form>"; 
+
+
+
+
         
-        while($sequencia=mysqli_fetch_array($dentro)){
-        echo   "$sequencia[2]";
-        echo "<br/> Comentou: $sequencia[1] <br/><br/><br/>";
-        }
+  
+
+
+
+        echo  "</div>";  
+        echo  "</div>";  
+        echo  "</div>";  
+
+
+
+       // echo  "Comente algo: <br/>";
+       // echo  "<form method='POST' action='comentario.php' role='form'>"; 
+       // echo  "<input type='hidden' name='usuario' value='$usuario'>";
+       // echo  "<input type='hidden' name='pop' value='$arranjo[0]'>";
+       // echo  "<textarea name='comentario' rows='5' data-rule='required' data-msg='Please write something for us' placeholder='Nos deixe um comentário!'></textarea>"; 
+       // echo  "<button type='submit' name='envcom' value='Comentar'>Enviar Comentário</button>"; 
+       // echo  "</form>"; 
+        
+       // while($sequencia=mysqli_fetch_array($dentro)){
+       //   if ($arranjo[0] == $sequencia[3]){
+       //     echo   "$sequencia[2]";
+       //     echo "<br/> Comentou: $sequencia[1] <br/><br/><br/>";
+      //    };
+      //  }
+
+
+
 
         /////////////////////////////////////FIM COMENTARIOS////////////////////////////////////////////////////
 
         echo  "</div>";  
+        echo "</div>";
         echo "</div>";
   
     }

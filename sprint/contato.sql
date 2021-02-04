@@ -15,14 +15,15 @@ CREATE TABLE `mensagem` (
 PRIMARY KEY (id)
 );
 
-CREATE TABLE `comentario` (
+/*CREATE TABLE `comentario` (
 `id`           INT (11) NOT NULL,
 `comentario`   TEXT,
-`usuario`      VARCHAR(250) NOT NULL
+`usuario`      VARCHAR(250) NOT NULL,
+`pop`          int(10) NOT NULL
 
 
 );
-
+*/
 CREATE TABLE `blog` (
 `id`   INT(11) NOT NULL,
 `titulo`   VARCHAR (250),
@@ -85,12 +86,12 @@ ALTER TABLE `blog`
 ALTER TABLE `curso`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
-  ALTER TABLE `comentario`
+ /* ALTER TABLE `comentario`
   ADD PRIMARY KEY (`id`);
 
 
 ALTER TABLE `comentario`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;*/
 
   INSERT INTO `curso` (`id`, `titulo`, `preço`, `lista1`, `lista2`, `lista3`, `lista4`) VALUES
 (1, 'Grátis', '0', 'Introdução aos princípios', 'O que é medicina da terra?', 'Materiais necessários', 'Mentoria exclusiva'),
