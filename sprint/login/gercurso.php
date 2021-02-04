@@ -98,6 +98,8 @@ if (@!$_SESSION['user']) {
 				<div class="fundo">   
 <div class='container' data-aos='fade-up'><div class='section-title'><br>
 <h2>Adicione cursos:</h2></div></div>
+
+
 				<form method="POST" action="" role="form" class="php-email-form">
 		
 		
@@ -160,7 +162,7 @@ if (@!$_SESSION['user']) {
 				
 			
 			
-			</form></div></div>
+			</form></div></div></div></div>
 			
 			<?php
 					if(isset($_POST['submit'])){
@@ -180,7 +182,14 @@ if (@!$_SESSION['user']) {
 //la variable  $mysqli viene de connect_db que lo traigo con el require("connect_db.php");
 				$query=mysqli_query($mysqli,$sql);
 
+
+				echo "<div class='overflow-x:auto;'>";
+				echo "<div class='table-responsive'>";
+
+
 				echo "<table border='1'; class='table table-hover';>";
+				
+
 					echo "<tr class='warning'>";
 						echo "<td>id</td>";
 						echo "<td>Título</td>";
@@ -219,7 +228,7 @@ if (@!$_SESSION['user']) {
 					echo "</tr>";
 				}
 
-				echo "</table>";
+				echo "</table>";echo "</div>";echo "</div>";echo "</div>";
 
 					extract($_GET);
 					if(@$idborrar==2){

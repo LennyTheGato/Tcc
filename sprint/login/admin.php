@@ -99,6 +99,7 @@ if (@!$_SESSION['user']) {
 
 
 				echo "<div class='overflow-x:auto;'>";
+				echo "<div class='table-responsive'>";
 
 				echo "<table border='1'; class='table table-hover';>";
 					echo "<tr class='warning'>";
@@ -134,7 +135,7 @@ if (@!$_SESSION['user']) {
 					echo "</tr>";
 				}
 
-				echo "</table>"; echo "</div>";
+				echo "</table>"; echo "</div>";echo "</div>";echo "</div>";
 			
 					extract($_GET);
 					if(@$idborrar==2){
@@ -176,7 +177,8 @@ if (@!$_SESSION['user']) {
 <!--///////////////////////////////////////////////////Termina cuerpo del documento interno////////////////////////////////////////////-->
 </div>
 
-	</div>
+</div></div>
+</div></div>
 </div>
 
 <div id="footer">

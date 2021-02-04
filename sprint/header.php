@@ -60,9 +60,7 @@
       <nav class="nav-menu d-none d-lg-block">
         <ul>
           <li class="active"><a href="index.php">Home</a></li>
-          <li><a href="blog.php">Blog</a></li>
-
-
+          
           <li><a href="#about">Sobre nós</a></li>
           <li><a href="#services">Serviços</a></li>
           <!--<li><a href="#departments">Departments</a></li>
@@ -91,7 +89,7 @@
         </ul>
       </nav><!-- .nav-menu -->
 
-      <div class="appointment-btn scrollto"> <a onclick="$('#content').load('cursos.php')"><span class="d-none d-md-inline">Conheça nossos</span> cursos</a></div>
+      <div class="appointment-btn scrollto"> <a onclick="$('#content').load('cursos.php')"><span class="d-none d-md-inline">Conheça nossos</span> Cursos</a></div>
     </div>
 
 </div>

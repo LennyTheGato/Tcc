@@ -814,7 +814,7 @@ session_start();
                 <div class="info-box mt-4">
                   <i class="bx bx-envelope"></i>
                   <h3>Email Us</h3>
-                  <p>raphaela.navachi@gmail.com<br>medicinadaterra@gmail.com</p>
+                  <p>medicinadaterraoficial@gmail.com<br></p>
                 </div>
               </div>
               <div class="col-md-6">
@@ -900,7 +900,7 @@ session_start();
                 Peruíbe - São Paulo <br>
                 <br><br>
                 <strong>Phone:</strong> +13 99692 7042<br>
-                <strong>Email:</strong> raphaela.navachi@gmail.com<br>
+                <strong>Email:</strong> medicinadaterraoficial@gmail.com<br>
               </p>
               <div class="social-links mt-3">
                 <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
@@ -913,11 +913,11 @@ session_start();
           </div>
 
           <div class="col-lg-2 col-md-6 footer-links">
-            <h4>Useful Links</h4>
+            <h4>Links úteis:</h4>
             <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Sobre nós</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Serviços</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#hero">Home</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#about">Sobre nós</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#services">Serviços</a></li>
              <!-- <li><i class="bx bx-chevron-right"></i> <a href="#">Terms of service</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="#">Privacy policy</a></li>-->
             </ul>
@@ -936,7 +936,7 @@ session_start();
 -->
 <div class="col-lg-4 col-md-6 footer-newsletter">
             <h4>Our Newsletter</h4>
-            <p>Tamen quem nulla quae legam multos aute sint culpa legam noster magna</p>
+            <p>Digite seu email e receba nossas informações exclusivas!</p>
             <form action="" method="post">
               <input type="email" name="email"><input type="submit" value="Subscribe">
             </form>

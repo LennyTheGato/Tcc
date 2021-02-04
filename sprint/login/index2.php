@@ -41,7 +41,7 @@
 <link href="../assets/css/style.css" rel="stylesheet">
 
   <!-- Terminar os metas -->
-	<title>Logado</title>
+	<title>Área exclusiva</title>
 
 
   </head>

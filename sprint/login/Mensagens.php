@@ -79,6 +79,11 @@ if (@!$_SESSION['user']) {
 //la variable  $mysqli viene de connect_db que lo traigo con el require("connect_db.php");
     $query=mysqli_query($mysqli,$sql);
 
+
+    
+    echo "<div class='overflow-x:auto;'>";
+    echo "<div class='table-responsive'>";
+
     echo "<table border='1'; class='table table-hover';>";
       echo "<tr class='warning'>";
         echo "<td>Id</td>";
@@ -89,7 +94,6 @@ if (@!$_SESSION['user']) {
         echo "<td>Excluir</td>";
       echo "</tr>";
 
-      
   ?>
     
   <?php 
@@ -109,6 +113,7 @@ if (@!$_SESSION['user']) {
     }
 
     echo "</table>";
+    echo" </div>";  echo" </div>";  
 
       extract($_GET);
       if(@$idborrar==2){

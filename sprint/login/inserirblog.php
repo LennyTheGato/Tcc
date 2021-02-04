@@ -145,6 +145,9 @@ echo "<input type='hidden' name='datapost' value='$tempo'>";
 	
 				$query=mysqli_query($mysqli,$sql);
 
+				echo "<div class='overflow-x:auto;'>";
+				echo "<div class='table-responsive'>";
+
 				echo "<table border='1'; class='table table-hover';>";
 					echo "<tr class='warning'>";
 						echo "<td>Id</td>";
@@ -171,7 +174,7 @@ echo "<input type='hidden' name='datapost' value='$tempo'>";
 					echo "</tr>";
 				}
 
-				echo "</table>";
+				echo "</table>";echo "</div>";echo "</div>";
 
 					extract($_GET);
 					if(@$idborrar==2){
